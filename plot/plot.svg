@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:gadfly="http://www.gadflyjl.org/ns"
+     version="1.2"
+     width="127mm" height="76.2mm" viewBox="0 0 127 76.2"
+     stroke="none"
+     fill="#000000"
+     stroke-width="0.3"
+     font-size="3.88"
+>
+<g class="plotroot yscalable" id="img-c635b0ad-1">
+  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-c635b0ad-2">
+    <text x="40.8" y="67.53" text-anchor="middle" dy="0.6em">BioJulia</text>
+    <text x="80.91" y="67.53" text-anchor="middle" dy="0.6em">Biopython</text>
+  </g>
+  <g class="guide colorkey" id="img-c635b0ad-3">
+    <g fill="#4C404B" font-size="2.82" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" id="img-c635b0ad-4">
+      <text x="104.77" y="28.51" dy="0.35em" id="img-c635b0ad-5" class="color_parse_1CRN">parse 1CRN</text>
+      <text x="104.77" y="32.14" dy="0.35em" id="img-c635b0ad-6" class="color_parse_3JYV">parse 3JYV</text>
+      <text x="104.77" y="35.76" dy="0.35em" id="img-c635b0ad-7" class="color_parse_1HTQ">parse 1HTQ</text>
+      <text x="104.77" y="39.39" dy="0.35em" id="img-c635b0ad-8" class="color_count">count</text>
+      <text x="104.77" y="43.02" dy="0.35em" id="img-c635b0ad-9" class="color_distance">distance</text>
+      <text x="104.77" y="46.64" dy="0.35em" id="img-c635b0ad-10" class="color_ramachandran">ramachandran</text>
+    </g>
+    <g stroke="#000000" stroke-opacity="0.000" id="img-c635b0ad-11">
+      <rect x="101.96" y="27.6" width="1.81" height="1.81" id="img-c635b0ad-12" class="color_parse_1CRN" fill="#00BFFF"/>
+      <rect x="101.96" y="31.23" width="1.81" height="1.81" id="img-c635b0ad-13" class="color_parse_3JYV" fill="#D4CA3A"/>
+      <rect x="101.96" y="34.86" width="1.81" height="1.81" id="img-c635b0ad-14" class="color_parse_1HTQ" fill="#FF6DAE"/>
+      <rect x="101.96" y="38.48" width="1.81" height="1.81" id="img-c635b0ad-15" class="color_count" fill="#00B78D"/>
+      <rect x="101.96" y="42.11" width="1.81" height="1.81" id="img-c635b0ad-16" class="color_distance" fill="#BEA9FF"/>
+      <rect x="101.96" y="45.74" width="1.81" height="1.81" id="img-c635b0ad-17" class="color_ramachandran" fill="#FF6765"/>
+    </g>
+    <g fill="#362A35" font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" stroke="#000000" stroke-opacity="0.000" id="img-c635b0ad-18">
+      <text x="101.96" y="24.69" id="img-c635b0ad-19">benchmark</text>
+    </g>
+  </g>
+<g clip-path="url(#img-c635b0ad-20)">
+  <g id="img-c635b0ad-21">
+    <g pointer-events="visible" opacity="1" fill="#000000" fill-opacity="0.000" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-c635b0ad-22">
+      <rect x="20.75" y="5" width="80.22" height="61.53" id="img-c635b0ad-23"/>
+    </g>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-c635b0ad-24">
+      <path fill="none" d="M20.75,64.53 L 100.96 64.53" id="img-c635b0ad-25"/>
+      <path fill="none" d="M20.75,50.14 L 100.96 50.14" id="img-c635b0ad-26"/>
+      <path fill="none" d="M20.75,35.76 L 100.96 35.76" id="img-c635b0ad-27"/>
+      <path fill="none" d="M20.75,21.38 L 100.96 21.38" id="img-c635b0ad-28"/>
+      <path fill="none" d="M20.75,7 L 100.96 7" id="img-c635b0ad-29"/>
+    </g>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-c635b0ad-30">
+      <path fill="none" d="M60.85,5 L 60.85 66.53" id="img-c635b0ad-31"/>
+    </g>
+    <g class="plotpanel" id="img-c635b0ad-32">
+      <g class="geometry" id="img-c635b0ad-33">
+        <g stroke-width="0.3" id="img-c635b0ad-34">
+          <use xlink:href="#img-c635b0ad-35" x="40.8" y="39.52" id="img-c635b0ad-36" class="color_parse_1CRN" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="40.8" y="22.59" id="img-c635b0ad-37" class="color_parse_3JYV" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="40.8" y="11.73" id="img-c635b0ad-38" class="color_parse_1HTQ" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="40.8" y="48.49" id="img-c635b0ad-39" class="color_count" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="40.8" y="59.38" id="img-c635b0ad-40" class="color_distance" fill="#BEA9FF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="40.8" y="41.3" id="img-c635b0ad-41" class="color_ramachandran" fill="#FF6765" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="80.91" y="36.23" id="img-c635b0ad-42" class="color_parse_1CRN" fill="#00BFFF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="80.91" y="20.56" id="img-c635b0ad-43" class="color_parse_3JYV" fill="#D4CA3A" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="80.91" y="11.46" id="img-c635b0ad-44" class="color_parse_1HTQ" fill="#FF6DAE" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="80.91" y="47.41" id="img-c635b0ad-45" class="color_count" fill="#00B78D" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="80.91" y="46.93" id="img-c635b0ad-46" class="color_distance" fill="#BEA9FF" stroke="#FFFFFF"/>
+          <use xlink:href="#img-c635b0ad-35" x="80.91" y="27.1" id="img-c635b0ad-47" class="color_ramachandran" fill="#FF6765" stroke="#FFFFFF"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-c635b0ad-48">
+    <text x="19.74" y="64.53" text-anchor="end" dy="0.35em" id="img-c635b0ad-49">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">-6</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="19.74" y="50.14" text-anchor="end" dy="0.35em" id="img-c635b0ad-50">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">-4</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="19.74" y="35.76" text-anchor="end" dy="0.35em" id="img-c635b0ad-51">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">-2</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="19.74" y="21.38" text-anchor="end" dy="0.35em" id="img-c635b0ad-52">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">0</tspan><tspan dy="0.498000em"></tspan></text>
+    <text x="19.74" y="7" text-anchor="end" dy="0.35em" id="img-c635b0ad-53">10<tspan style="dominant-baseline:inherit" dy="-0.6em" font-size="83%">2</tspan><tspan dy="0.498000em"></tspan></text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-c635b0ad-54">
+    <text x="8.81" y="33.76" text-anchor="middle" dy="0.35em" transform="rotate(-90, 8.81, 35.76)" id="img-c635b0ad-55">time / s</text>
+  </g>
+</g>
+<defs>
+  <clipPath id="img-c635b0ad-20">
+  <path d="M20.75,5 L 100.96 5 100.96 66.53 20.75 66.53" />
+</clipPath>
+  <g id="img-c635b0ad-35">
+    <circle cx="0" cy="0" r="0.9" id="img-c635b0ad-56"/>
+  </g>
+</defs>
+</svg>
