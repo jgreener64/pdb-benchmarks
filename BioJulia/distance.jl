@@ -5,21 +5,19 @@
 using Bio.Structure
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 10000
+runs = 1
 
 struc = read(pdb_filepath, PDB)
-
-function multidistance(n::Integer)
-    for i in 1:n
-        dist = distance(struc['A'][50], struc['A'][60])
-    end
-end
+times = Float64[]
 
 # Run to JIT compile
-multidistance(1)
+d = distance(struc['A'][50], struc['A'][60])
 
-tic()
-multidistance(runs)
-elapsed = toq()
+for i in 1:runs
+    tic()
+    d = distance(struc['A'][50], struc['A'][60])
+    elapsed = toq()
+    push!(times, elapsed)
+end
 
-println("Average time per run: ", elapsed / runs)
+println("Average time per run: ", mean(times))

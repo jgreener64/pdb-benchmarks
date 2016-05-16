@@ -37,14 +37,28 @@ Mac OS X Yosemite 10.10.5
 
 Time measured is time to completion, so CPU...
 
+Note you can't just compare as some parsing does different things, e.g. headers...
+
 All times in seconds.
 
-| Software    | Parse 1CRN | Parse 3JYV | Parse 1HTQ | Count   | Distance  | Ramachandran |
-| :---------- | :--------- | :--------- | :--------- | :------ | :-------- | :----------- |
-| BioJulia    | 0.0030     | 0.68       | 22         | 0.00017 | 0.0000052 | 0.0017       |
-| Biopython   | 0.0086     | 1.3        | 24         | 0.00024 | 0.00028   | 0.16         |
+| Package     | BioJulia   | Biopython  | ProDy      | Bio3D   | Rpdb      |
+| :---------- | :--------- | :--------- | :--------- | :------ | :-------- |
+Parse 1CRN
+Parse 3JYV
+Parse 1HTQ
+Count
+Distance
+Ramachandran
+----
+Parses header
+Heirarchichal parsing
+Writes PDBs
+Superimposition
+Supports disorder
+License
 
-![benchmarks](plot/plot.svg)
+
+![benchmarks](plot/plot.png "benchmarks")
 
 
 # Parsing errors

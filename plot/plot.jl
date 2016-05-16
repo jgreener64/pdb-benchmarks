@@ -17,4 +17,4 @@ p = plot(df,
     Guide.ylabel("time / s"),
 )
 
-draw(SVG("plot/plot.svg", 5inch, 3inch), p)
+draw(PNG("plot/plot.png", 8inch, 5inch), p)

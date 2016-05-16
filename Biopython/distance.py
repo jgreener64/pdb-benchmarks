@@ -6,21 +6,24 @@ import time
 from Bio.PDB import PDBParser
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 10000
+runs = 100
 
 parser = PDBParser()
-struc = parser.get_structure('test', pdb_filepath)
+struc = parser.get_structure("", pdb_filepath)
+times = []
 
-def multidistance(n):
-    for i in range(n):
-        min_dist = float("inf")
-        for atom_a in struc[0]['A'][50]:
-            for atom_b in struc[0]['A'][60]:
-                if atom_a - atom_b < min_dist:
-                    min_dist = atom_a - atom_b
+def distance(n):
+    min_dist = float("inf")
+    for atom_a in struc[0]['A'][50]:
+        for atom_b in struc[0]['A'][60]:
+            if atom_a - atom_b < min_dist:
+                min_dist = atom_a - atom_b
+    return min_dist
 
-start = time.time()
-multidistance(runs)
-elapsed = time.time() - start
+for i in range(runs):
+    start = time.time()
+    d = distance(runs)
+    elapsed = time.time() - start
+    times.append(elapsed)
 
-print "Average time per run:", elapsed / runs
+print "Average time per run:", sum(times) / runs

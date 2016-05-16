@@ -5,17 +5,16 @@ using Bio.Structure
 const pdb_filepath = ARGS[1]
 runs = 100
 
-function multiparse(n::Integer)
-    for i in 1:n
-        struc = read(pdb_filepath, PDB)
-    end
-end
+times = Float64[]
 
 # Run to JIT compile
-multiparse(1)
+struc = read(pdb_filepath, PDB)
 
-tic()
-multiparse(runs)
-elapsed = toq()
+for i in 1:runs
+    tic()
+    struc = read(pdb_filepath, PDB)
+    elapsed = toq()
+    push!(times, elapsed)
+end
 
-println("Average time per run: ", elapsed / runs)
+println("Average time per run: ", mean(times))

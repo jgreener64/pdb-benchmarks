@@ -4,20 +4,23 @@ import time
 from Bio.PDB import PDBParser
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 1000
+runs = 100
 
 parser = PDBParser()
-struc = parser.get_structure('test', pdb_filepath)
+struc = parser.get_structure("", pdb_filepath)
+times = []
 
-def multicount(n):
-    for i in range(n):
-        count = 0
-        for res in struc.get_residues():
-            if res.get_resname() == "ALA":
-                count += 1
+def count():
+    count = 0
+    for res in struc.get_residues():
+        if res.get_resname() == "ALA":
+            count += 1
+    return count
 
-start = time.time()
-multicount(runs)
-elapsed = time.time() - start
+for i in range(runs):
+    start = time.time()
+    c = count()
+    elapsed = time.time() - start
+    times.append(elapsed)
 
-print "Average time per run:", elapsed / runs
+print "Average time per run:", sum(times) / runs

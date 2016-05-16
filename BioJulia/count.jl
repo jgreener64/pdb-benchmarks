@@ -3,21 +3,19 @@
 using Bio.Structure
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 1000
+runs = 100
 
 struc = read(pdb_filepath, PDB)
-
-function multicount(n::Integer)
-    for i in 1:n
-        count = countresidues(struc, res -> resname(res) == "ALA")
-    end
-end
+times = Float64[]
 
 # Run to JIT compile
-multicount(1)
+c = countresidues(struc, res -> resname(res) == "ALA")
 
-tic()
-multicount(runs)
-elapsed = toq()
+for i in 1:runs
+    tic()
+    c = countresidues(struc, res -> resname(res) == "ALA")
+    elapsed = toq()
+    push!(times, elapsed)
+end
 
-println("Average time per run: ", elapsed / runs)
+println("Average time per run: ", mean(times))

@@ -6,18 +6,16 @@ pdb_filepath = "pdbs/1AKE.pdb"
 runs = 100
 
 struc = read(pdb_filepath, PDB)
-
-function multiramachandran(n::Integer)
-    for i in 1:n
-        phi_angles, psi_angles = ramachandranangles(struc, stdresselector)
-    end
-end
+times = Float64[]
 
 # Run to JIT compile
-multiramachandran(1)
+phi, psi = ramachandranangles(struc, stdresselector)
 
-tic()
-multiramachandran(runs)
-elapsed = toq()
+for i in 1:runs
+    tic()
+    phi, psi = ramachandranangles(struc, stdresselector)
+    elapsed = toq()
+    push!(times, elapsed)
+end
 
-println("Average time per run: ", elapsed / runs)
+println("Average time per run: ", mean(times))
