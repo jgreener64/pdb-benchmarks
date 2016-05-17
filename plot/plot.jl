@@ -3,10 +3,7 @@
 using DataFrames
 using Gadfly
 
-df = readtable("benchmarks.csv",
-    names=[:package, :benchmark, :time],
-    header=false,
-)
+df = readtable("benchmarks.csv")
 
 p = plot(df,
     x=:package,

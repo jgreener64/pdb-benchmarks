@@ -1,3 +1,4 @@
+package,benchmark,time
 BioJulia,parse 1CRN,0.0029
 BioJulia,parse 3JYV,0.82
 BioJulia,parse 1HTQ,45
