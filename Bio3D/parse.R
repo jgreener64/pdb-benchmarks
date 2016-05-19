@@ -4,10 +4,10 @@ library(bio3d)
 library(microbenchmark)
 
 pdb_filepath <- commandArgs(trailingOnly=TRUE)[1]
-runs <- 100
+runs <- 3
 
 parsepdb <- function() {
-    struc <- read.pdb(pdb_filepath)
+    struc <- read.pdb(pdb_filepath, multi=TRUE)
 }
 
 bench <- microbenchmark(parsepdb(), times=runs)

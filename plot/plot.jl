@@ -12,6 +12,8 @@ p = plot(df,
     Scale.y_log10,
     Guide.xlabel(nothing),
     Guide.ylabel("time / s"),
+    Geom.point,
+    Geom.line,
 )
 
 draw(PNG("plot/plot.png", 8inch, 5inch), p)
