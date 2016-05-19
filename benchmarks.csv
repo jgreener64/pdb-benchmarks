@@ -14,12 +14,17 @@ Biopython,ramachandran,0.16
 ProDy,parse 1CRN,0.0022
 ProDy,parse 3JYV,0.29
 ProDy,parse 1HTQ,1.7
+ProDy,count,0.015
+ProDy,distance,0.0019
+ProDy,ramachandran,0.22
 Bio3D,parse 1CRN,0.029
 Bio3D,parse 3JYV,14
 Bio3D,parse 1HTQ,63
 Rpdb,parse 1CRN,0.015
 Rpdb,parse 3JYV,1.8
 Rpdb,parse 1HTQ,31
+Rpdb,count,0.00030
+Rpdb,distance,0.0010
 BioPerl,parse 1CRN,0.023
 BioPerl,parse 3JYV,3.6
 BioPerl,parse 1HTQ,62

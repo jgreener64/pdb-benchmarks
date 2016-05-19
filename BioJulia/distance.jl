@@ -1,6 +1,6 @@
 # Benchmark the calculation of a distance in a PDB file
 # The distance is the closest distance between any atoms of residues 50 and 60
-#   in 1AKE
+#   of chain A in 1AKE
 
 using Bio.Structure
 

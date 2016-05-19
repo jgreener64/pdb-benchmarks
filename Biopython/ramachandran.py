@@ -11,7 +11,7 @@ parser = PDBParser()
 struc = parser.get_structure("", pdb_filepath)
 times = []
 
-def ramachandran(n):
+def ramachandran():
     phi_angles = []
     psi_angles = []
     residues = list(struc.get_residues())
@@ -21,13 +21,16 @@ def ramachandran(n):
         res_next = residues[i+1]
         # Check residues are not hetero residues and that they have sequential residue numbers
         if res.get_id()[0] == " " and res_prev.get_id()[0] == " " and res_next.get_id()[0] == " " and res.get_id()[1] == res_prev.get_id()[1]+1 and res_next.get_id()[1] == res.get_id()[1]+1:
-            phi_angles.append(calc_dihedral(res_prev["C"].get_vector(), res["N"].get_vector(), res["CA"].get_vector(), res["C"].get_vector()))
-            psi_angles.append(calc_dihedral(res["N"].get_vector(), res["CA"].get_vector(), res["C"].get_vector(), res_next["N"].get_vector()))
+            try:
+                phi_angles.append(calc_dihedral(res_prev["C"].get_vector(), res["N"].get_vector(), res["CA"].get_vector(), res["C"].get_vector()))
+                psi_angles.append(calc_dihedral(res["N"].get_vector(), res["CA"].get_vector(), res["C"].get_vector(), res_next["N"].get_vector()))
+            except:
+                pass
     return phi_angles, psi_angles
 
 for i in range(runs):
     start = time.time()
-    phi, psi = ramachandran(runs)
+    phi, psi = ramachandran()
     elapsed = time.time() - start
     times.append(elapsed)
 

@@ -18,7 +18,7 @@ Disclosure: I contributed the `Bio.Structure` module to BioJulia.
   * [3JYV](http://www.rcsb.org/pdb/explore/explore.do?structureId=3jyv) - 80S rRNA (57,327 atoms)
   * [1HTQ](http://www.rcsb.org/pdb/explore/explore.do?structureId=1htq) - multicopy glutamine synthetase (10 models of 97,872 atoms)
 * Counting the number of alanine residues in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
-* Calculating the distance between residues 50 and 60 in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
+* Calculating the distance between residues 50 and 60 of chain A in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
 * Calculating the Ramachandran phi/psi angles in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
 
 [1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483
@@ -44,11 +44,11 @@ Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867
 
 Time measured is time to completion, so CPU...
 
-Note you can't just compare as some parsing does different things, e.g. headers... for example ProDy doesn't do heirarchical below.
+Note you can't just compare as some parsing does different things, e.g. headers... for example ProDy doesn't do heirarchical below (check this, actually it does).
 
 All times in seconds.
 
-|                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioJava      |
+|                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      | BioJava
 | :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
 | Parse 1CRN            |              |              |              |              |              |              |              |
 | Parse 3JYV            |              |              |              |              |              |              |              |
@@ -57,12 +57,12 @@ All times in seconds.
 | Distance              |              |              |              |              |              |              |              |
 | Ramachandran          |              |              |              |              |              |              |              |
 | ----                  |              |              |              |              |              |              |              |
-| Language              | Julia        | Python       | Python       | R            | R            | Perl         | Java         |
+| Language              | Julia        | Python       | Python       | R            | R            | Perl         | Ruby         |
 | Parses header         | ✗            | ✓            | ✓            |              |              |              |              |
 | Heirarchichal parsing | ✓            | ✓            |              |              |              |              |              |
 | Writes PDBs           | ✓            | ✓            |              |              |              | ✓            |              |
 | Superimposition       | ✗            | ✓            | ✓            |              |              |              |              |
 | Supports disorder     | ✓            | ✓            |              |              |              |              |              |
-| License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | LGPL         |
+| License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         | LGPL
 
 ![benchmarks](plot/plot.png "benchmarks")

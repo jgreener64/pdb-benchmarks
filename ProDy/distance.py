@@ -3,21 +3,20 @@
 #   of chain A in 1AKE
 
 import time
-from Bio.PDB import PDBParser
+from prody import *
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 100
+runs = 1000
 
-parser = PDBParser()
-struc = parser.get_structure("", pdb_filepath)
+struc = parsePDB(pdb_filepath)
 times = []
 
 def distance():
     min_dist = float("inf")
-    for atom_a in struc[0]['A'][50]:
-        for atom_b in struc[0]['A'][60]:
-            if atom_a - atom_b < min_dist:
-                min_dist = atom_a - atom_b
+    for atom_a in struc['A', 50]:
+        for atom_b in struc['A', 60]:
+            if calcDistance(atom_a, atom_b) < min_dist:
+                min_dist = calcDistance(atom_a, atom_b)
     return min_dist
 
 for i in range(runs):

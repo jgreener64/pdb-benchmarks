@@ -15,4 +15,4 @@ for i in 1..runs
     times = times + elapsed
 end
 
-puts "Average time per run: ", times / runs
+print "Average time per run: ", times / runs, "\n"

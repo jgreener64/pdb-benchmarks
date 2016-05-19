@@ -1,0 +1,20 @@
+# Benchmark the counting of alanine residues in a PDB file
+
+library(Rpdb)
+library(microbenchmark)
+
+pdb_filepath <- "pdbs/1AKE.pdb"
+runs <- 1000
+
+struc <- read.pdb(pdb_filepath)
+
+count <- function() {
+    resnums <- struc$atoms$resid[struc$atoms$resname=="ALA"]
+    chains <- struc$atoms$chainid[struc$atoms$resname=="ALA"]
+    resids <- paste(resnums, chains, sep="")
+    return(length(unique(resids)))
+}
+
+bench <- microbenchmark(count(), times=runs)
+
+cat("Average time per run: ", mean(bench$time) / 10^9, "\n", sep="")
