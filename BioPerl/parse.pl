@@ -5,14 +5,18 @@ use Time::HiRes qw(time);
 use strict;
 
 my $pdb_filepath = $ARGV[0];
-my $runs = 5;
+my $runs = 1;
 
 my $times = 0.0;
 
-for( $i = 0; $i < $runs; $i = $i + 1 ){
-    my $start_run = time();
+sub parse {
     my $structio = Bio::Structure::IO->new(-file => $pdb_filepath);
-    my $struc = $structio->next_structure;
+    return $structio->next_structure;
+}
+
+for (my $i = 0; $i < $runs; $i++) {
+    my $start_run = time();
+    my $struc = parse();
     my $end_run = time();
     my $run_time = $end_run - $start_run;
     $times = $times + $run_time;

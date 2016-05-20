@@ -10,7 +10,7 @@ Biopython,parse 3JYV,1.3
 Biopython,parse 1HTQ,23
 Biopython,count,0.00024
 Biopython,distance,0.00028
-Biopython,ramachandran,0.16
+Biopython,ramachandran,0.15
 ProDy,parse 1CRN,0.0022
 ProDy,parse 3JYV,0.29
 ProDy,parse 1HTQ,1.7
@@ -20,6 +20,8 @@ ProDy,ramachandran,0.22
 Bio3D,parse 1CRN,0.029
 Bio3D,parse 3JYV,14
 Bio3D,parse 1HTQ,63
+Bio3D,count,0.00037
+Bio3D,distance,0.00068
 Rpdb,parse 1CRN,0.015
 Rpdb,parse 3JYV,1.8
 Rpdb,parse 1HTQ,31
@@ -28,6 +30,10 @@ Rpdb,distance,0.0010
 BioPerl,parse 1CRN,0.023
 BioPerl,parse 3JYV,3.6
 BioPerl,parse 1HTQ,62
+BioPerl,count,0.00070
+BioPerl,distance,0.00082
 BioRuby,parse 1CRN,0.026
 BioRuby,parse 3JYV,0.94
 BioRuby,parse 1HTQ,17
+BioRuby,count,0.00018
+BioRuby,distance,0.00049

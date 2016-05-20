@@ -35,6 +35,7 @@ The PDB files can be downloaded to directory `pdbs` by running `source download_
 * [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.2-2 running on R v3.2.2
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.2 running on R v3.2.2
 * [BioPerl](http://bioperl.org/index.html) v1.6.924 running on Perl v5.18.2
+* [BioRuby](http://bioruby.org/) v1.5.0 running on Ruby v2.0.0
 * [BioJava](http://biojava.org/) v... running on Java v1.8.0_91
 
 
@@ -66,3 +67,8 @@ All times in seconds.
 | License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         | LGPL
 
 ![benchmarks](plot/plot.png "benchmarks")
+
+
+## Opinions
+
+* For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.

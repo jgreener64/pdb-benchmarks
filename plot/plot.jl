@@ -16,4 +16,4 @@ p = plot(df,
     Geom.line,
 )
 
-draw(PNG("plot/plot.png", 8inch, 5inch), p)
+draw(PNG("plot/plot.png", 9inch, 6inch), p)
