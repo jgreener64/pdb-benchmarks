@@ -6,11 +6,8 @@ import time
 from Bio.PDB import PDBParser
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 100
-
 parser = PDBParser()
 struc = parser.get_structure("", pdb_filepath)
-times = []
 
 def distance():
     min_dist = float("inf")
@@ -20,10 +17,8 @@ def distance():
                 min_dist = atom_a - atom_b
     return min_dist
 
-for i in range(runs):
-    start = time.time()
-    d = distance()
-    elapsed = time.time() - start
-    times.append(elapsed)
+start = time.time()
+distance()
+elapsed = time.time() - start
 
-print "Average time per run:", sum(times) / runs
+print elapsed

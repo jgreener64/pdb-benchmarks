@@ -4,16 +4,12 @@ import time
 from prody import *
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 10
-
 struc = parsePDB(pdb_filepath)
-times = []
 
 def ramachandran():
     phi_angles = []
     psi_angles = []
-    hv = struc.getHierView()
-    for res in hv.iterResidues():
+    for res in struc.getHierView().iterResidues():
         try:
             phi_angle = calcPhi(res)
             psi_angle = calcPsi(res)
@@ -23,10 +19,8 @@ def ramachandran():
             pass
     return phi_angles, psi_angles
 
-for i in range(runs):
-    start = time.time()
-    phi, psi = ramachandran()
-    elapsed = time.time() - start
-    times.append(elapsed)
+start = time.time()
+ramachandran()
+elapsed = time.time() - start
 
-print "Average time per run:", sum(times) / runs
+print elapsed

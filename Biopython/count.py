@@ -4,11 +4,8 @@ import time
 from Bio.PDB import PDBParser
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 100
-
 parser = PDBParser()
 struc = parser.get_structure("", pdb_filepath)
-times = []
 
 def count():
     count = 0
@@ -17,10 +14,8 @@ def count():
             count += 1
     return count
 
-for i in range(runs):
-    start = time.time()
-    c = count()
-    elapsed = time.time() - start
-    times.append(elapsed)
+start = time.time()
+count()
+elapsed = time.time() - start
 
-print "Average time per run:", sum(times) / runs
+print elapsed

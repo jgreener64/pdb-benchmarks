@@ -4,23 +4,17 @@ import time
 from prody import *
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 1000
-
 struc = parsePDB(pdb_filepath)
-times = []
 
 def count():
-    hv = struc.getHierView()
     count = 0
-    for res in hv.iterResidues():
+    for res in struc.getHierView().iterResidues():
         if res.getResname() == "ALA":
             count += 1
     return count
 
-for i in range(runs):
-    start = time.time()
-    c = count()
-    elapsed = time.time() - start
-    times.append(elapsed)
+start = time.time()
+count()
+elapsed = time.time() - start
 
-print "Average time per run:", sum(times) / runs
+print elapsed

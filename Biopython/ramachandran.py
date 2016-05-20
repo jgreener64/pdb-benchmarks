@@ -5,11 +5,8 @@ from Bio.PDB import PDBParser
 from Bio.PDB.Vector import calc_dihedral
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 100
-
 parser = PDBParser()
 struc = parser.get_structure("", pdb_filepath)
-times = []
 
 def ramachandran():
     phi_angles = []
@@ -30,10 +27,8 @@ def ramachandran():
                 pass
     return phi_angles, psi_angles
 
-for i in range(runs):
-    start = time.time()
-    phi, psi = ramachandran()
-    elapsed = time.time() - start
-    times.append(elapsed)
+start = time.time()
+ramachandran()
+elapsed = time.time() - start
 
-print "Average time per run:", sum(times) / runs
+print elapsed

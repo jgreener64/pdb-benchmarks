@@ -4,12 +4,7 @@ library(Rpdb)
 library(microbenchmark)
 
 pdb_filepath <- commandArgs(trailingOnly=TRUE)[1]
-runs <- 100
 
-parsepdb <- function() {
-    struc <- read.pdb(pdb_filepath)
-}
+bench <- microbenchmark(read.pdb(pdb_filepath), times=1)
 
-bench <- microbenchmark(parsepdb(), times=runs)
-
-cat("Average time per run: ", mean(bench$time) / 10^9, "\n", sep="")
+cat(bench$time / 10^9, "\n", sep="")

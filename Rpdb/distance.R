@@ -6,8 +6,6 @@ library(Rpdb)
 library(microbenchmark)
 
 pdb_filepath <- "pdbs/1AKE.pdb"
-runs <- 1000
-
 struc <- read.pdb(pdb_filepath)
 
 distance <- function() {
@@ -17,6 +15,6 @@ distance <- function() {
     return(min(norm(d, type="xyz")))
 }
 
-bench <- microbenchmark(distance(), times=runs)
+bench <- microbenchmark(distance(), times=1)
 
-cat("Average time per run: ", mean(bench$time) / 10^9, "\n", sep="")
+cat(bench$time / 10^9, "\n", sep="")

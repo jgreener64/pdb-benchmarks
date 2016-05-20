@@ -6,7 +6,7 @@ Open source software to parse [Protein Data Bank](http://www.rcsb.org/pdb/home/h
 
 This repository aims to collate benchmarks for common tasks across various languages. The collection of scripts may also be useful to get an idea how each package functions.
 
-Please feel free to contribute scripts from other languages, or submit improvements the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
+Please feel free to contribute scripts from other packages, or submit improvements the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
 
 Disclosure: I contributed the `Bio.Structure` module to BioJulia.
 
@@ -21,8 +21,7 @@ Disclosure: I contributed the `Bio.Structure` module to BioJulia.
 * Calculating the distance between residues 50 and 60 of chain A in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
 * Calculating the Ramachandran phi/psi angles in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
 
-[1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483
-Link ^^
+[1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 | [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
 
 The PDB files can be downloaded to directory `pdbs` by running `source download_pdbs.sh` from this directory.
 
@@ -36,20 +35,17 @@ The PDB files can be downloaded to directory `pdbs` by running `source download_
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.2 running on R v3.2.2
 * [BioPerl](http://bioperl.org/index.html) v1.6.924 running on Perl v5.18.2
 * [BioRuby](http://bioruby.org/) v1.5.0 running on Ruby v2.0.0
-* [BioJava](http://biojava.org/) v... running on Java v1.8.0_91
 
 
 ## Comparison
 
-Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867 MHz DDR3 RAM. The operating system was Mac OS X Yosemite 10.10.5.
-
-Time measured is time to completion, so CPU...
+Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867 MHz DDR3 RAM. The operating system was Mac OS X Yosemite 10.10.5. Time is the elapsed time.
 
 Note you can't just compare as some parsing does different things, e.g. headers... for example ProDy doesn't do heirarchical below (check this, actually it does).
 
-All times in seconds.
+All times are in seconds.
 
-|                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      | BioJava
+|                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      |
 | :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
 | Parse 1CRN            |              |              |              |              |              |              |              |
 | Parse 3JYV            |              |              |              |              |              |              |              |
@@ -64,7 +60,7 @@ All times in seconds.
 | Writes PDBs           | ✓            | ✓            |              |              |              | ✓            |              |
 | Superimposition       | ✗            | ✓            | ✓            |              |              |              |              |
 | Supports disorder     | ✓            | ✓            |              |              |              |              |              |
-| License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         | LGPL
+| License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         |
 
 ![benchmarks](plot/plot.png "benchmarks")
 
@@ -72,3 +68,10 @@ All times in seconds.
 ## Opinions
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
+
+
+## Plans
+
+* Finish Ramachandran scripts for remaining languages.
+* Test BioJava, hPDB, one or more C++ libraries and possibly others.
+* Run methods on the whole of the PDB to look for errors.

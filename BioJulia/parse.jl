@@ -2,19 +2,11 @@
 
 using Bio.Structure
 
-const pdb_filepath = ARGS[1]
-runs = 100
-
-times = Float64[]
+pdb_filepath = ARGS[1]
 
 # Run to JIT compile
-struc = read(pdb_filepath, PDB)
+read(pdb_filepath, PDB)
 
-for i in 1:runs
-    tic()
-    struc = read(pdb_filepath, PDB)
-    elapsed = toq()
-    push!(times, elapsed)
-end
+elapsed = @elapsed struc = read(pdb_filepath, PDB)
 
-println("Average time per run: ", mean(times))
+println(elapsed)

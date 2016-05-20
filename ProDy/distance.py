@@ -6,10 +6,7 @@ import time
 from prody import *
 
 pdb_filepath = "pdbs/1AKE.pdb"
-runs = 1000
-
 struc = parsePDB(pdb_filepath)
-times = []
 
 def distance():
     min_dist = float("inf")
@@ -19,10 +16,8 @@ def distance():
                 min_dist = calcDistance(atom_a, atom_b)
     return min_dist
 
-for i in range(runs):
-    start = time.time()
-    d = distance()
-    elapsed = time.time() - start
-    times.append(elapsed)
+start = time.time()
+distance()
+elapsed = time.time() - start
 
-print "Average time per run:", sum(times) / runs
+print elapsed

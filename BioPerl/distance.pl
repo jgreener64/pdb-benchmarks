@@ -7,11 +7,8 @@ use Time::HiRes qw(time);
 use strict;
 
 my $pdb_filepath = "pdbs/1AKE.pdb";
-my $runs = 1;
-
 my $structio = Bio::Structure::IO->new(-file => $pdb_filepath);
 my $struc = $structio->next_structure;
-my $times = 0.0;
 
 sub distance {
     my @coords_50 = ();
@@ -43,12 +40,8 @@ sub distance {
     return sqrt($min_sq_dist);
 }
 
-for( my $i = 0; $i < $runs; $i = $i + 1 ){
-    my $start_run = time();
-    my $d = distance();
-    my $end_run = time();
-    my $run_time = $end_run - $start_run;
-    $times = $times + $run_time;
-}
+my $start = time();
+distance();
+my $end = time();
 
-print "Average time per run: ", $times / $runs, "\n";
+print $end - $start, "\n";

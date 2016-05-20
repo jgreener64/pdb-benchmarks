@@ -4,12 +4,7 @@ library(bio3d)
 library(microbenchmark)
 
 pdb_filepath <- commandArgs(trailingOnly=TRUE)[1]
-runs <- 3
 
-parsepdb <- function() {
-    struc <- read.pdb(pdb_filepath, multi=TRUE)
-}
+bench <- microbenchmark(read.pdb(pdb_filepath, multi=TRUE), times=1)
 
-bench <- microbenchmark(parsepdb(), times=runs)
-
-cat("Average time per run: ", mean(bench$time) / 10^9, "\n", sep="")
+cat(bench$time / 10^9, "\n", sep="")
