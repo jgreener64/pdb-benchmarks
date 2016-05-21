@@ -47,16 +47,14 @@ Note that direct comparison between these times should be treated with caution, 
 
 Each package supports these to varying degrees.
 
-All times are in seconds.
-
 |                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      |
 | :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
-| Parse 1CRN            | 0.0028       | 0.010        | 0.0023       | 0.030        | 0.017        | 0.056        | 0.027        |
-| Parse 3JYV            | 0.77         | 1.0          | 0.30         | 14           | 2.1          | 3.7          | 0.97         |
-| Parse 1HTQ            | 35           | 23           | 1.7          | 57           | 32           | 66           | 18           |
-| Count                 | 0.00046      | 0.00045      | 0.011        | 0.00047      | 0.00039      | 0.00081      | 0.00024      |
-| Distance              | 0.000036     | 0.00037      | 0.0081       | 0.0011       | 0.0016       | 0.00089      | 0.00056      |
-| Ramachandran          | 0.0017       | 0.16         | 0.24         | -            | -            | -            | -            |
+| Parse 1CRN / ms       | 2.8          | 10           | 2.3          | 30           | 17           | 56           | 27           |
+| Parse 3JYV / s        | 0.77         | 1.0          | 0.30         | 14           | 2.1          | 3.7          | 0.97         |
+| Parse 1HTQ / s        | 35           | 23           | 1.7          | 57           | 32           | 66           | 18           |
+| Count / ms            | 0.46         | 0.45         | 11           | 0.47         | 0.39         | 0.81         | 0.24         |
+| Distance / ms         | 0.036        | 0.37         | 8.1          | 1.1          | 1.6          | 0.89         | 0.56         |
+| Ramachandran / ms     | 1.7          | 160          | 240          | -            | -            | -            | -            |
 | Language              | Julia        | Python       | Python       | R            | R            | Perl         | Ruby         |
 | Parses header         | ✗            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            |
 | Heirarchichal parsing | ✓            | ✓            | ✓            | ✗            | ✗            | ✓            | ✓            |
@@ -74,10 +72,17 @@ Benchmarks as a plot:
 ## Opinions
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
+* If you are analysing ensembles of proteins use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
 
 
 ## Plans
 
 * Finish Ramachandran scripts for remaining languages.
 * Test BioJava, hPDB, one or more C++ libraries and possibly others.
-* Run methods on the whole of the PDB to look for errors.
+* Run methods on the whole of the PDB to look at how they deal with errors.
+
+
+## Resources
+
+* A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries/).
+* The Biopython [documentation](http://biopython.org/wiki/The_Biopython_Structural_Bioinformatics_FAQ) has a useful discussion on disorder at the atom and residue level.
