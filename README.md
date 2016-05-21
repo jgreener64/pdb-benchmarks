@@ -1,10 +1,8 @@
 # PDB benchmarks
 
-**Warning: under development. Don't trust these benchmarks yet.**
-
 Open source software to parse [Protein Data Bank](http://www.rcsb.org/pdb/home/home.do) (PDB) files and manipulate protein structures exist in many languages, often as part of Bio* projects.
 
-This repository aims to collate benchmarks for common tasks across various languages. The collection of scripts may also be useful to get an idea how each package functions.
+This repository aims to collate benchmarks for common tasks across various languages and packages. The collection of scripts may also be useful to get an idea how each package works.
 
 Please feel free to contribute scripts from other packages, or submit improvements the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
 
@@ -23,7 +21,9 @@ Disclosure: I contributed the `Bio.Structure` module to BioJulia.
 
 [1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 | [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
 
-The PDB files can be downloaded to directory `pdbs` by running `source download_pdbs.sh` from this directory.
+The PDB files can be downloaded to directory `pdbs` by running `source download_pdbs.sh` from this directory. If you have all the software installed you can use the script `run_benchmarks.sh` to run the benchmarks. The mean was then taken to obtain the values below.
+
+Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867 MHz DDR3 RAM. The operating system was Mac OS X Yosemite 10.10.5. Time is the elapsed time.
 
 
 ## Software
@@ -39,28 +39,34 @@ The PDB files can be downloaded to directory `pdbs` by running `source download_
 
 ## Comparison
 
-Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867 MHz DDR3 RAM. The operating system was Mac OS X Yosemite 10.10.5. Time is the elapsed time.
+Note that direct comparison between these times should be treated with caution, as each package does something slightly different. For example, things that increase parsing time include:
 
-Note you can't just compare as some parsing does different things, e.g. headers... for example ProDy doesn't do heirarchical below (check this, actually it does).
+* Parsing the PDB header
+* Accounting for disorder at both the atom and residue (point mutation) level
+* Forming a heirarchical model of the protein that makes access to specific residues, atoms etc. easier after parsing
+
+Each package supports these to varying degrees.
 
 All times are in seconds.
 
 |                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      |
 | :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
-| Parse 1CRN            |              |              |              |              |              |              |              |
-| Parse 3JYV            |              |              |              |              |              |              |              |
-| Parse 1HTQ            |              |              |              |              |              |              |              |
-| Count                 |              |              |              |              |              |              |              |
-| Distance              |              |              |              |              |              |              |              |
-| Ramachandran          |              |              |              |              |              |              |              |
-| ----                  |              |              |              |              |              |              |              |
+| Parse 1CRN            | 0.0028       | 0.010        | 0.0023       | 0.030        | 0.017        | 0.056        | 0.027        |
+| Parse 3JYV            | 0.77         | 1.0          | 0.30         | 14           | 2.1          | 3.7          | 0.97         |
+| Parse 1HTQ            | 35           | 23           | 1.7          | 57           | 32           | 66           | 18           |
+| Count                 | 0.00046      | 0.00045      | 0.011        | 0.00047      | 0.00039      | 0.00081      | 0.00024      |
+| Distance              | 0.000036     | 0.00037      | 0.0081       | 0.0011       | 0.0016       | 0.00089      | 0.00056      |
+| Ramachandran          | 0.0017       | 0.16         | 0.24         | -            | -            | -            | -            |
 | Language              | Julia        | Python       | Python       | R            | R            | Perl         | Ruby         |
-| Parses header         | ✗            | ✓            | ✓            |              |              |              |              |
-| Heirarchichal parsing | ✓            | ✓            |              |              |              |              |              |
-| Writes PDBs           | ✓            | ✓            |              |              |              | ✓            |              |
-| Superimposition       | ✗            | ✓            | ✓            |              |              |              |              |
-| Supports disorder     | ✓            | ✓            |              |              |              |              |              |
+| Parses header         | ✗            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            |
+| Heirarchichal parsing | ✓            | ✓            | ✓            | ✗            | ✗            | ✓            | ✓            |
+| Writes PDBs           | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✗            |
+| Superimposition       | ✗            | ✓            | ✓            | ✓            | ✗            | ✗            | ✗            |
+| Supports disorder     | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            |
+| PCA                   | ✗            | ✗            | ✓            | ✓            | ✗            | ✗            | ✗            |
 | License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         |
+
+Benchmarks as a plot:
 
 ![benchmarks](plot/plot.png "benchmarks")
 

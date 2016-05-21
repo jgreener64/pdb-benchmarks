@@ -2,7 +2,7 @@ package,benchmark,time
 BioJulia,parse 1CRN,0.0028
 BioJulia,parse 3JYV,0.77
 BioJulia,parse 1HTQ,35
-BioJulia,count,0.0015
+BioJulia,count,0.00046
 BioJulia,distance,0.000036
 BioJulia,ramachandran,0.0017
 Biopython,parse 1CRN,0.010
@@ -24,7 +24,7 @@ Bio3D,count,0.00047
 Bio3D,distance,0.0011
 Rpdb,parse 1CRN,0.017
 Rpdb,parse 3JYV,2.1
-Rpdb,parse 1HTQ,31
+Rpdb,parse 1HTQ,32
 Rpdb,count,0.00039
 Rpdb,distance,0.0016
 BioPerl,parse 1CRN,0.056

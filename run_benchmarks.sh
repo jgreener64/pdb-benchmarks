@@ -1,6 +1,6 @@
 # Run all benchmarks and save results as .dat files
 
-# Number of runs
+# Number of runs for each benchmark apart from 1HTQ parsing
 n=10
 # Number of runs for 1HTQ parsing
 ns=2
