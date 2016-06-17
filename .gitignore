@@ -1,3 +1,10 @@
 pdbs/
 *.dat
 todo.txt
+Victor/*.o
+Victor/parse
+ESBTL/CMakeFiles
+ESBTL/CMakeCache.txt
+ESBTL/Makefile
+ESBTL/cmake_install.cmake
+ESBTL/parse

@@ -1,39 +1,44 @@
 package,benchmark,time
-BioJulia,parse 1CRN,0.0028
-BioJulia,parse 3JYV,0.77
-BioJulia,parse 1HTQ,35
-BioJulia,count,0.00046
-BioJulia,distance,0.000036
-BioJulia,ramachandran,0.0017
-Biopython,parse 1CRN,0.010
-Biopython,parse 3JYV,1.0
-Biopython,parse 1HTQ,23
-Biopython,count,0.00045
-Biopython,distance,0.00037
-Biopython,ramachandran,0.16
-ProDy,parse 1CRN,0.0023
-ProDy,parse 3JYV,0.30
-ProDy,parse 1HTQ,1.7
-ProDy,count,0.011
-ProDy,distance,0.0081
-ProDy,ramachandran,0.24
-Bio3D,parse 1CRN,0.030
-Bio3D,parse 3JYV,14
-Bio3D,parse 1HTQ,57
-Bio3D,count,0.00047
-Bio3D,distance,0.0011
-Rpdb,parse 1CRN,0.017
-Rpdb,parse 3JYV,2.1
-Rpdb,parse 1HTQ,32
-Rpdb,count,0.00039
-Rpdb,distance,0.0016
-BioPerl,parse 1CRN,0.056
-BioPerl,parse 3JYV,3.7
-BioPerl,parse 1HTQ,66
-BioPerl,count,0.00081
-BioPerl,distance,0.00089
-BioRuby,parse 1CRN,0.027
-BioRuby,parse 3JYV,0.97
-BioRuby,parse 1HTQ,18
-BioRuby,count,0.00024
-BioRuby,distance,0.00056
+BioJulia,parse 1CRN,0.0029998805
+BioJulia,parse 3JYV,0.6316254716
+BioJulia,parse 1HTQ,17.778034001
+BioJulia,count,0.0004500764
+BioJulia,distance,2.83387e-05
+BioJulia,ramachandran,0.0088006778
+Biopython,parse 1CRN,0.0102788925171
+Biopython,parse 3JYV,1.0378415823
+Biopython,parse 1HTQ,23.4640889963
+Biopython,count,0.00045371055603
+Biopython,distance,0.000350594520569
+Biopython,ramachandran,0.145032191277
+ProDy,parse 1CRN,0.0023514509201
+ProDy,parse 3JYV,0.303211116791
+ProDy,parse 1HTQ,1.84817504883
+ProDy,count,0.00941548347474
+ProDy,distance,0.0056405544281
+ProDy,ramachandran,0.207109475136
+Bio3D,parse 1CRN,0.032697204
+Bio3D,parse 3JYV,14.136471
+Bio3D,parse 1HTQ,56.1742066667
+Bio3D,count,0.0005074433
+Bio3D,distance,0.00113196
+Rpdb,parse 1CRN,0.01786369
+Rpdb,parse 3JYV,2.124272
+Rpdb,parse 1HTQ,32.0881366667
+Rpdb,count,0.0004125064
+Rpdb,distance,0.0016344693
+BioPerl,parse 1CRN,0.0617320299149
+BioPerl,parse 3JYV,3.80630609989
+BioPerl,parse 1HTQ,65.7169075807
+BioPerl,count,0.000857877731323
+BioPerl,distance,0.000926041603088
+BioRuby,parse 1CRN,0.0270879
+BioRuby,parse 3JYV,1.0159933
+BioRuby,parse 1HTQ,17.744652
+BioRuby,count,0.0002455
+BioRuby,distance,0.0005586
+Victor,parse 1CRN,0.0109412
+Victor,parse 3JYV,8.1146996
+Victor,parse 1HTQ,17.0914776667
+ESBTL,parse 1CRN,0.0062364
+ESBTL,parse 3JYV,0.9648135

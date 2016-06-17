@@ -1,6 +1,6 @@
 # PDB benchmarks
 
-Open source software to parse [Protein Data Bank](http://www.rcsb.org/pdb/home/home.do) (PDB) files and manipulate protein structures exist in many languages, often as part of Bio* projects.
+Open source software packages to parse [Protein Data Bank](http://www.rcsb.org/pdb/home/home.do) (PDB) files and manipulate protein structures exist in many languages, often as part of Bio* projects.
 
 This repository aims to collate benchmarks for common tasks across various languages and packages. The collection of scripts may also be useful to get an idea how each package works.
 
@@ -21,7 +21,7 @@ Disclosure: I contributed the `Bio.Structure` module to BioJulia.
 
 [1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 | [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
 
-The PDB files can be downloaded to directory `pdbs` by running `source download_pdbs.sh` from this directory. If you have all the software installed you can use the script `run_benchmarks.sh` to run the benchmarks. The mean was then taken to obtain the values below.
+The PDB files can be downloaded to directory `pdbs` by running `source tools/download_pdbs.sh` from this directory. If you have all the software installed, and compiled where applicable, you can use the script `tools/run_benchmarks.sh` from this directory to run the benchmarks. The mean over a number of runs is taken for each benchmark to obtain the values below.
 
 Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867 MHz DDR3 RAM. The operating system was Mac OS X Yosemite 10.10.5. Time is the elapsed time.
 
@@ -35,6 +35,8 @@ Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.2 running on R v3.2.2
 * [BioPerl](http://bioperl.org/index.html) v1.6.924 running on Perl v5.18.2
 * [BioRuby](http://bioruby.org/) v1.5.0 running on Ruby v2.0.0
+* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v6.1.0
+* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v6.1.0
 
 
 ## Comparison
@@ -43,26 +45,27 @@ Note that direct comparison between these times should be treated with caution, 
 
 * Parsing the PDB header
 * Accounting for disorder at both the atom and residue (point mutation) level
-* Forming a heirarchical model of the protein that makes access to specific residues, atoms etc. easier after parsing
+* Forming a heirarchical model of the protein that makes access to specific residues, atoms etc. easier and faster after parsing
+* Checking that the PDB format is adhered to at various levels of strictness
 
 Each package supports these to varying degrees.
 
-|                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      |
-| :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
-| Parse 1CRN / ms       | 2.8          | 10           | 2.3          | 30           | 17           | 56           | 27           |
-| Parse 3JYV / s        | 0.77         | 1.0          | 0.30         | 14           | 2.1          | 3.7          | 0.97         |
-| Parse 1HTQ / s        | 35           | 23           | 1.7          | 57           | 32           | 66           | 18           |
-| Count / ms            | 0.46         | 0.45         | 11           | 0.47         | 0.39         | 0.81         | 0.24         |
-| Distance / ms         | 0.036        | 0.37         | 8.1          | 1.1          | 1.6          | 0.89         | 0.56         |
-| Ramachandran / ms     | 1.7          | 160          | 240          | -            | -            | -            | -            |
-| Language              | Julia        | Python       | Python       | R            | R            | Perl         | Ruby         |
-| Parses header         | ✗            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            |
-| Heirarchichal parsing | ✓            | ✓            | ✓            | ✗            | ✗            | ✓            | ✓            |
-| Writes PDBs           | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✗            |
-| Superimposition       | ✗            | ✓            | ✓            | ✓            | ✗            | ✗            | ✗            |
-| Supports disorder     | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            |
-| PCA                   | ✗            | ✗            | ✓            | ✓            | ✗            | ✗            | ✗            |
-| License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         |
+|                       | BioJulia     | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      | Victor       | ESBTL        |
+| :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
+| Parse 1CRN / ms       | 3.0          | 10           | 2.4          | 33           | 18           | 62           | 27           | 11           | 6.2          |
+| Parse 3JYV / s        | 0.63         | 1.0          | 0.30         | 14           | 2.1          | 3.8          | 1.0          | 8.1          | 0.96         |
+| Parse 1HTQ / s        | 18           | 23           | 1.8          | 56           | 32           | 66           | 18           | 17           | -            |
+| Count / ms            | 0.45         | 0.45         | 9.4          | 0.51         | 0.41         | 0.86         | 0.25         | -            | -            |
+| Distance / ms         | 0.028        | 0.35         | 5.6          | 1.1          | 1.6          | 0.93         | 0.56         | -            | -            |
+| Ramachandran / ms     | 8.8          | 150          | 210          | -            | -            | -            | -            | -            | -            |
+| Language              | Julia        | Python       | Python       | R            | R            | Perl         | Ruby         | C++          | C++          |
+| Parses header         | ✗            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            | ✓            | ✗            |
+| Heirarchichal parsing | ✓            | ✓            | ✓            | ✗            | ✗            | ✓            | ✓            | ✓            | ✓            |
+| Supports disorder     | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            | ✗            | ✓            |
+| Writes PDBs           | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            | ✓            |
+| Superimposition       | ✗            | ✓            | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            |
+| PCA                   | ✗            | ✗            | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            |
+| License               | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         | GPLv3        | GPLv3        |
 
 Benchmarks as a plot:
 
@@ -78,7 +81,7 @@ Benchmarks as a plot:
 ## Plans
 
 * Finish Ramachandran scripts for remaining languages.
-* Test BioJava, hPDB, one or more C++ libraries and possibly others.
+* Test BioJava, hPDB, possibly others.
 * Run methods on the whole of the PDB to look at how they deal with errors.
 
 
@@ -86,3 +89,4 @@ Benchmarks as a plot:
 
 * A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries/).
 * The Biopython [documentation](http://biopython.org/wiki/The_Biopython_Structural_Bioinformatics_FAQ) has a useful discussion on disorder at the atom and residue level.
+* Sets of utility scripts exist including [pdbtools](https://github.com/harmslab/pdbtools), [pdb-tools](https://github.com/JoaoRodrigues/pdb-tools) and [PDBFixer](https://github.com/pandegroup/pdbfixer).
