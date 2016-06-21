@@ -35,6 +35,14 @@ run_benchmark $nb "julia BioJulia/distance.jl"                     "BioJulia/dis
 run_benchmark $nb "julia BioJulia/ramachandran.jl"                 "BioJulia/ramachandran.dat"  "BioJulia,ramachandran,"
 echo "BioJulia benchmarks done"
 
+# MIToS
+run_benchmark $nb "julia MIToS/parse.jl pdbs/1CRN.pdb"          "MIToS/parse_1CRN.dat"    "MIToS,parse 1CRN,"
+run_benchmark $nb "julia MIToS/parse.jl pdbs/3JYV.pdb"          "MIToS/parse_3JYV.dat"    "MIToS,parse 3JYV,"
+run_benchmark $ns "julia MIToS/parse.jl pdbs/1HTQ.pdb"          "MIToS/parse_1HTQ.dat"    "MIToS,parse 1HTQ,"
+run_benchmark $nb "julia MIToS/count.jl"                        "MIToS/count.dat"         "MIToS,count,"
+run_benchmark $nb "julia MIToS/distance.jl"                     "MIToS/distance.dat"      "MIToS,distance,"
+echo "MIToS benchmarks done"
+
 # Biopython
 run_benchmark $nb "python Biopython/parse.py pdbs/1CRN.pdb"        "Biopython/parse_1CRN.dat"   "Biopython,parse 1CRN,"
 run_benchmark $nb "python Biopython/parse.py pdbs/3JYV.pdb"        "Biopython/parse_3JYV.dat"   "Biopython,parse 3JYV,"
