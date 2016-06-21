@@ -78,6 +78,11 @@ Benchmarks as a plot:
 * If you are analysing ensembles of proteins use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
 
 
+## Contributing
+
+If you want to contribute benchmarks for a package, please make a pull request with the script(s) in a directory like the other packages. I will run the benchmarks again and change the README, thanks.
+
+
 ## Plans
 
 * Finish Ramachandran scripts for remaining languages.
