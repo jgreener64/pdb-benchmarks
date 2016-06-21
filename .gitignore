@@ -8,3 +8,8 @@ ESBTL/CMakeCache.txt
 ESBTL/Makefile
 ESBTL/cmake_install.cmake
 ESBTL/parse
+
+# vim temporary files
+*~
+# swap file
+*.swp
