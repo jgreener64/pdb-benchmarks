@@ -77,6 +77,7 @@ Benchmarks as a plot:
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
 * If you are analysing ensembles of proteins use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
+* For fast parsing, consider using the [Macromolecular Transmission Format](http://mmtf.rcsb.org/).
 
 
 ## Contributing
