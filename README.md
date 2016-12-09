@@ -51,22 +51,22 @@ Note that direct comparison between these times should be treated with caution, 
 
 Each package supports these to varying degrees.
 
-|                       | BioJulia     | MIToS        | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl      | BioRuby      | Victor       | ESBTL        |
-| :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- |
-| Parse 1CRN / ms       | 3.1          | 2.2          | 11           | 2.4          | 32           | 18           | 63           | 33           | 10           | 6.3          |
-| Parse 3JYV / s        | 0.60         | 0.73         | 1.0          | 0.32         | 14           | 2.1          | 3.8          | 0.98         | 7.8          | 0.95         |
-| Parse 1HTQ / s        | 17           | 24.5         | 23           | 1.8          | 54           | 32           | 67           | 17           | 16           | -            |
-| Count / ms            | 0.51         | 0.16         | 0.47         | 9.5          | 0.53         | 0.39         | 0.94         | 0.19         | -            | -            |
-| Distance / ms         | 0.026        | 0.012        | 0.24         | 6.2          | 1.1          | 1.7          | 0.91         | 0.52         | -            | -            |
-| Ramachandran / ms     | 8.8          | -            | 150          | 210          | -            | -            | -            | -            | -            | -            |
-| Language              | Julia        | Julia        | Python       | Python       | R            | R            | Perl         | Ruby         | C++          | C++          |
-| Parses header         | ✗            | ✗            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            | ✓            | ✗            |
-| Heirarchichal parsing | ✓            | ✗            | ✓            | ✓            | ✗            | ✗            | ✓            | ✓            | ✓            | ✓            |
-| Supports disorder     | ✓            | ✗            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            | ✗            | ✓            |
-| Writes PDBs           | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✗            | ✓            | ✓            |
-| Superimposition       | ✗            | ✓            | ✓            | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            |
-| PCA                   | ✗            | ✗            | ✗            | ✓            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗            |
-| License               | MIT          | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby         | GPLv3        | GPLv3        |
+|                       | BioJulia     | MIToS        | Biopython    | ProDy        | Bio3D        | Rpdb         | BioPerl       | BioRuby      | Victor        | ESBTL        | MDAnalysis |
+| :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :------------ | :----------- | :------------ | :----------- | :--------- |
+| Parse 1CRN / ms       | 3.1          | 2.2          | 11           | 2.4          | 32           | 18           | 63            | 33           | 10            | 6.3          |            |
+| Parse 3JYV / s        | 0.60         | 0.73         | 1.0          | 0.32         | 14           | 2.1          | 3.8           | 0.98         | 7.8           | 0.95         |            |
+| Parse 1HTQ / s        | 17           | 24.5         | 23           | 1.8          | 54           | 32           | 67            | 17           | 16            | -            |            |
+| Count / ms            | 0.51         | 0.16         | 0.47         | 9.5          | 0.53         | 0.39         | 0.94          | 0.19         | -             | -            |            |
+| Distance / ms         | 0.026        | 0.012        | 0.24         | 6.2          | 1.1          | 1.7          | 0.91          | 0.52         | -             | -            |            |
+| Ramachandran / ms     | 8.8          | -            | 150          | 210          | -            | -            | -             | -            | -             | -            |            |
+| Language              | Julia        | Julia        | Python       | Python       | R            | R            | Perl          | Ruby         | C++           | C++          | Python     |
+| Parses header         | ✗            | ✗           | ✓           | ✓            | ✓           | ✓            | ✗            | ✓            | ✓            | ✗            | ✗         |
+| Heirarchichal parsing | ✓            | ✗           | ✓           | ✓            | ✗           | ✗            | ✓            | ✓            | ✓            | ✓            | ✓         |
+| Supports disorder     | ✓            | ✗           | ✓           | ✗            | ✗           | ✗            | ✗            | ✗            | ✗            | ✓            | ✓         |
+| Writes PDBs           | ✓            | ✓           | ✓           | ✓            | ✓           | ✓            | ✓            | ✗            | ✓            | ✓            | ✓         |
+| Superimposition       | ✗            | ✓           | ✓           | ✓            | ✓           | ✗            | ✗            | ✗            | ✗            | ✗            | ✓         |
+| PCA                   | ✗            | ✗           | ✗           | ✓            | ✓           | ✗            | ✗            | ✗            | ✗            | ✗            | ✓         |
+| License               | MIT          | MIT          | Biopython    | MIT          | GPLv2        | GPL          | GPL/Artistic | Ruby           | GPLv3        | GPLv3         | GPLv2     |
 
 Benchmarks as a plot:
 
