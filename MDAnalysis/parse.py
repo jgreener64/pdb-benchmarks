@@ -1,3 +1,5 @@
+# Benchmark the parsing of a PDB file given as an argument
+
 import sys
 import time
 import MDAnalysis as mda

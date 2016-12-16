@@ -6,8 +6,8 @@ pdb_filepath = "pdbs/1AKE.pdb"
 struc = read(pdb_filepath, PDB)
 
 # Run to JIT compile
-ramachandranangles(struc, stdresselector)
+ramachandranangles(struc, standardselector)
 
-elapsed = @elapsed ramachandranangles(struc, stdresselector)
+elapsed = @elapsed ramachandranangles(struc, standardselector)
 
 println(elapsed)

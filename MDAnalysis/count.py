@@ -1,10 +1,12 @@
+# Benchmark the counting of alanine residues in a PDB file
+
 import time
 import MDAnalysis as mda
 
-u = mda.Universe("pdbs/4AKE.pdb")
+pdb_filepath = "pdbs/1AKE.pdb"
+u = mda.Universe(pdb_filepath)
 
 def count():
-    """ah ah ah ah ah"""
     return (u.residues.resnames == "ALA").sum()
 
 start = time.time()
