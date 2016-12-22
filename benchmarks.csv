@@ -1,55 +1,55 @@
 package,benchmark,time
-BioJulia,parse 1CRN,0.0027026137
-BioJulia,parse 3JYV,0.918160368
-BioJulia,parse 1HTQ,32.1939088557
-BioJulia,count,0.0008878018
-BioJulia,distance,0.0001048253
-BioJulia,ramachandran,0.0130941523
-MIToS,parse 1CRN,0.0024310097
-MIToS,parse 3JYV,0.7461758753
-MIToS,parse 1HTQ,27.5585689187
-MIToS,count,0.0001608217
-MIToS,distance,1.06511e-05
-Biopython,parse 1CRN,0.00905480384826
-Biopython,parse 3JYV,1.03092801571
-Biopython,parse 1HTQ,24.3057837486
-Biopython,count,0.000472187995911
-Biopython,distance,0.000253415107727
-Biopython,ramachandran,0.128313446045
-ProDy,parse 1CRN,0.0021443605423
-ProDy,parse 3JYV,0.278896045685
-ProDy,parse 1HTQ,1.71090269089
-ProDy,count,0.00904476642609
-ProDy,distance,0.00549826622009
-ProDy,ramachandran,0.177154445648
-MDAnalysis,parse 1CRN,0.00624992847443
-MDAnalysis,parse 3JYV,0.788858675957
-MDAnalysis,parse 1HTQ,2.98877398173
-MDAnalysis,count,0.00573058128357
-MDAnalysis,distance,0.00326442718506
-MDAnalysis,ramachandran,3.34603483677
-Bio3D,parse 1CRN,0.02870919
-Bio3D,parse 3JYV,13.565608
-Bio3D,parse 1HTQ,57.2334533333
-Bio3D,count,0.0006406631
-Bio3D,distance,0.0014362992
-Rpdb,parse 1CRN,0.01821251
-Rpdb,parse 3JYV,2.1184125
-Rpdb,parse 1HTQ,33.9099233333
-Rpdb,count,0.0004590125
-Rpdb,distance,0.0022473228
-BioPerl,parse 1CRN,0.0549425125122
-BioPerl,parse 3JYV,3.8368311882
-BioPerl,parse 1HTQ,69.8122990131
-BioPerl,count,0.0009840965271
-BioPerl,distance,0.000917506217957
-BioRuby,parse 1CRN,0.0245466
-BioRuby,parse 3JYV,1.010705
-BioRuby,parse 1HTQ,18.351989
-BioRuby,count,0.000256
-BioRuby,distance,0.0005688
-Victor,parse 1CRN,0.0104434
-Victor,parse 3JYV,7.93515
-Victor,parse 1HTQ,16.7800653333
-ESBTL,parse 1CRN,0.0064512
-ESBTL,parse 3JYV,0.9683863
+BioJulia,parse 1CRN,0.0014337011
+BioJulia,parse 3JYV,0.494010716
+BioJulia,parse 1HTQ,27.050372604
+BioJulia,count,0.0009133724
+BioJulia,distance,0.0001085539
+BioJulia,ramachandran,0.0126058895
+MIToS,parse 1CRN,0.0024723777
+MIToS,parse 3JYV,0.7449214148
+MIToS,parse 1HTQ,27.742717482
+MIToS,count,0.000162955
+MIToS,distance,1.05011e-05
+Biopython,parse 1CRN,0.009126162529
+Biopython,parse 3JYV,1.0440015316
+Biopython,parse 1HTQ,24.7070407073
+Biopython,count,0.000478219985962
+Biopython,distance,0.000394201278687
+Biopython,ramachandran,0.132207679749
+ProDy,parse 1CRN,0.00220158100128
+ProDy,parse 3JYV,0.277773308754
+ProDy,parse 1HTQ,1.66654626528
+ProDy,count,0.00890963077545
+ProDy,distance,0.00557851791382
+ProDy,ramachandran,0.182567977905
+MDAnalysis,parse 1CRN,0.00639481544495
+MDAnalysis,parse 3JYV,0.804785895348
+MDAnalysis,parse 1HTQ,3.02686738968
+MDAnalysis,count,0.00566983222961
+MDAnalysis,distance,0.00332925319672
+MDAnalysis,ramachandran,3.52832899094
+Bio3D,parse 1CRN,0.030886889
+Bio3D,parse 3JYV,13.912969
+Bio3D,parse 1HTQ,59.5528966667
+Bio3D,count,0.0005294571
+Bio3D,distance,0.0013626084
+Rpdb,parse 1CRN,0.019260535
+Rpdb,parse 3JYV,2.2234583
+Rpdb,parse 1HTQ,34.2367833333
+Rpdb,count,0.0004578448
+Rpdb,distance,0.0019274901
+BioPerl,parse 1CRN,0.0631693124771
+BioPerl,parse 3JYV,3.8211861372
+BioPerl,parse 1HTQ,70.6152213415
+BioPerl,count,0.00079402923584
+BioPerl,distance,0.000853991508484
+BioRuby,parse 1CRN,0.0248881
+BioRuby,parse 3JYV,0.97945
+BioRuby,parse 1HTQ,18.190185
+BioRuby,count,0.0001931
+BioRuby,distance,0.0005145
+Victor,parse 1CRN,0.0104942
+Victor,parse 3JYV,7.7264042
+Victor,parse 1HTQ,16.5626163333
+ESBTL,parse 1CRN,0.0068145
+ESBTL,parse 3JYV,0.9481992

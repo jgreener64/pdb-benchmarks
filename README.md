@@ -28,7 +28,7 @@ Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867
 
 ## Software
 
-* [BioJulia](https://biojulia.github.io/Bio.jl/) master branch version running on Julia v0.5.0 (times measured after JIT compilation)
+* [BioJulia](https://biojulia.github.io/Bio.jl/) development version running on Julia v0.5.0 (times measured after JIT compilation)
 * [MIToS](https://github.com/diegozea/MIToS.jl) v1.2.3 running on Julia v0.4.6 (times measured after JIT compilation)
 * [Biopython](http://biopython.org/wiki/Biopython) v1.66 running on Python v2.7.11
 * [ProDy](http://prody.csb.pitt.edu/) v1.7 running on Python v2.7.11
@@ -54,12 +54,12 @@ Each package supports these to varying degrees.
 
 |                       | BioJulia     | MIToS        | Biopython    | ProDy        | MDAnalysis   | Bio3D        | Rpdb         | BioPerl       | BioRuby      | Victor        | ESBTL        |
 | :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :------------ | :----------- | :------------ | :----------- |
-| Parse 1CRN / ms       | 2.7          | 2.4          | 9.1          | 2.1          | 6.2          | 29           | 18           | 55            | 25           | 10            | 6.5          |
-| Parse 3JYV / s        | 0.92         | 0.75         | 1.0          | 0.28         | 0.79         | 14           | 2.1          | 3.8           | 1.0          | 8.0           | 0.97         |
-| Parse 1HTQ / s        | 32           | 28           | 24           | 1.7          | 3.0          | 57           | 34           | 70            | 18           | 17            | -            |
-| Count / ms            | 0.89         | 0.16         | 0.47         | 9.0          | 5.7          | 0.64         | 0.46         | 0.98          | 0.26         | -             | -            |
-| Distance / ms         | 0.10         | 0.011        | 0.25         | 5.5          | 3.3          | 1.4          | 2.2          | 0.92          | 0.57         | -             | -            |
-| Ramachandran / ms     | 13           | -            | 130          | 180          | 3300         | -            | -            | -             | -            | -             | -            |
+| Parse 1CRN / ms       | 1.4          | 2.4          | 9.1          | 2.2          | 6.4          | 31           | 19           | 63            | 25           | 10            | 6.8          |
+| Parse 3JYV / s        | 0.49         | 0.74         | 1.0          | 0.28         | 0.80         | 14           | 2.2          | 3.8           | 0.98         | 7.7           | 0.95         |
+| Parse 1HTQ / s        | 27           | 28           | 25           | 1.7          | 3.0          | 60           | 34           | 71            | 18           | 17            | -            |
+| Count / ms            | 0.91         | 0.16         | 0.48         | 8.9          | 5.7          | 0.53         | 0.46         | 0.79          | 0.19         | -             | -            |
+| Distance / ms         | 0.11         | 0.011        | 0.39         | 5.6          | 3.3          | 1.4          | 1.9          | 0.85          | 0.51         | -             | -            |
+| Ramachandran / ms     | 13           | -            | 130          | 180          | 3500         | -            | -            | -             | -            | -             | -            |
 | Language              | Julia        | Julia        | Python       | Python       | Python       | R            | R            | Perl          | Ruby         | C++           | C++          |
 | Parses header         | ✗            | ✗            | ✓            | ✓            | ✗            | ✓            | ✓            | ✗             | ✓            | ✓             | ✗            |
 | Heirarchichal parsing | ✓            | ✗            | ✓            | ✓            | ✓            | ✗            | ✗            | ✓             | ✓            | ✓             | ✓            |
