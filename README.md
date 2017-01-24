@@ -95,6 +95,7 @@ If you want to contribute benchmarks for a package, please make a pull request w
 
 ## Resources
 
+* The PDB file format documentation can be found [here](http://www.wwpdb.org/documentation/file-format).
 * A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries/).
 * The Biopython [documentation](http://biopython.org/wiki/The_Biopython_Structural_Bioinformatics_FAQ) has a useful discussion on disorder at the atom and residue level.
 * Sets of utility scripts exist including [pdbtools](https://github.com/harmslab/pdbtools), [pdb-tools](https://github.com/JoaoRodrigues/pdb-tools) and [PDBFixer](https://github.com/pandegroup/pdbfixer).
