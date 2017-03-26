@@ -28,7 +28,7 @@ Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867
 
 ## Software
 
-* [BioJulia](https://biojulia.github.io/Bio.jl/) development version running on Julia v0.5.0 (times measured after JIT compilation)
+* [BioJulia](https://biojulia.github.io/Bio.jl/) master branch running on Julia v0.5.0 (times measured after JIT compilation)
 * [MIToS](https://github.com/diegozea/MIToS.jl) v1.2.3 running on Julia v0.4.6 (times measured after JIT compilation)
 * [Biopython](http://biopython.org/wiki/Biopython) v1.66 running on Python v2.7.11
 * [ProDy](http://prody.csb.pitt.edu/) v1.7 running on Python v2.7.11
