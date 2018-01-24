@@ -78,7 +78,7 @@ Benchmarks as a plot:
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
 * If you are analysing ensembles of proteins use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
-* For fast parsing, consider using the [Macromolecular Transmission Format](http://mmtf.rcsb.org/).
+* For fast parsing, consider using a binary format such as [MMTF](http://mmtf.rcsb.org/) or [binaryCIF](https://github.com/dsehnal/BinaryCIF).
 
 
 ## Contributing
@@ -88,9 +88,11 @@ If you want to contribute benchmarks for a package, please make a pull request w
 
 ## Plans
 
-* Finish Ramachandran scripts for remaining languages.
 * Test BioJava, hPDB, possibly others.
+* Finish Ramachandran scripts for remaining languages.
 * Run methods on the whole of the PDB to look at how they deal with errors.
+* Add benchmarks for parsing mmCIF, the standard PDB archive format.
+* Add benchmarks for parsing binary formats, e.g. MMTF.
 
 
 ## Resources
