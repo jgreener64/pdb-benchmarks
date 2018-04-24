@@ -4,6 +4,8 @@ Open source software packages to parse [Protein Data Bank](http://www.rcsb.org/p
 
 This repository aims to collate benchmarks for common tasks across various languages and packages. The collection of scripts may also be useful to get an idea how each package works.
 
+**NB - Some of the packages tested use out of date versions. I will look to fix this soon.**
+
 Please feel free to contribute scripts from other packages, or submit improvements the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
 
 Disclosure: I contributed the `Bio.Structure` module to BioJulia.
