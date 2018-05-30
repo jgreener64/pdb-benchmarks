@@ -99,6 +99,7 @@ If you want to contribute benchmarks for a package, please make a pull request w
 
 ## Resources
 
+* Benchmarks for mmCIF parsing can be found [here](https://github.com/project-gemmi/mmcif-benchmark).
 * The PDB file format documentation can be found [here](http://www.wwpdb.org/documentation/file-format).
 * A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries/).
 * The Biopython [documentation](http://biopython.org/wiki/The_Biopython_Structural_Bioinformatics_FAQ) has a useful discussion on disorder at the atom and residue level.
