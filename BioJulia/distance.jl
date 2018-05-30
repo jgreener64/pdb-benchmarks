@@ -2,7 +2,7 @@
 # The distance is the closest distance between any atoms of residues 50 and 60
 #   of chain A in 1AKE
 
-using Bio.Structure
+using BioStructures
 
 pdb_filepath = "pdbs/1AKE.pdb"
 struc = read(pdb_filepath, PDB)

@@ -8,6 +8,6 @@ pdb_filepath = sys.argv[1]
 
 start = time.time()
 parsePDB(pdb_filepath)
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

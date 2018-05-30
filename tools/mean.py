@@ -10,4 +10,3 @@ for line in in_file:
 in_file.close()
 
 print(np.mean(vals))
-

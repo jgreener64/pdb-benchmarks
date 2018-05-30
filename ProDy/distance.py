@@ -18,6 +18,6 @@ def distance():
 
 start = time.time()
 distance()
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

@@ -9,6 +9,6 @@ parser = PDBParser()
 
 start = time.time()
 parser.get_structure("", pdb_filepath)
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

@@ -1,6 +1,6 @@
 # Benchmark the counting of alanine residues in a PDB file
 
-using Bio.Structure
+using BioStructures
 
 pdb_filepath = "pdbs/1AKE.pdb"
 struc = read(pdb_filepath, PDB)

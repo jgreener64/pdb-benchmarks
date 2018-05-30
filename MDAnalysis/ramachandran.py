@@ -28,6 +28,6 @@ def ramachandran():
 
 start = time.time()
 ramachandran()
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

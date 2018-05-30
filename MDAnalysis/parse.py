@@ -8,6 +8,6 @@ pdb_filepath = sys.argv[1]
 
 start = time.time()
 mda.Universe(pdb_filepath)
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

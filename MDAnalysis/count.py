@@ -11,6 +11,6 @@ def count():
 
 start = time.time()
 count()
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

@@ -12,12 +12,12 @@ def ramachandran():
     phi_angles = []
     psi_angles = []
     residues = list(struc.get_residues())
-    for i in range(1,len(residues)-1):
+    for i in range(1, len(residues) - 1):
         res = residues[i]
-        res_prev = residues[i-1]
-        res_next = residues[i+1]
+        res_prev = residues[i - 1]
+        res_next = residues[i + 1]
         # Check residues have sequential residue numbers
-        if res.get_id()[1] == res_prev.get_id()[1]+1 and res_next.get_id()[1] == res.get_id()[1]+1:
+        if res.get_id()[1] == res_prev.get_id()[1] + 1 and res_next.get_id()[1] == res.get_id()[1] + 1:
             try:
                 phi_angle = calc_dihedral(res_prev["C"].get_vector(), res["N"].get_vector(), res["CA"].get_vector(), res["C"].get_vector())
                 psi_angle = calc_dihedral(res["N"].get_vector(), res["CA"].get_vector(), res["C"].get_vector(), res_next["N"].get_vector())
@@ -29,6 +29,6 @@ def ramachandran():
 
 start = time.time()
 ramachandran()
-elapsed = time.time() - start
+end = time.time()
 
-print elapsed
+print(end - start)

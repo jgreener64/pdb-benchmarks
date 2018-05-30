@@ -1,6 +1,6 @@
 # Benchmark the parsing of a PDB file given as an argument
 
-using Bio.Structure
+using BioStructures
 
 pdb_filepath = ARGS[1]
 
