@@ -5,11 +5,11 @@
 using MIToS.PDB
 
 pdb_filepath = "pdbs/1AKE.pdb"
-struc = @residuesdict read(pdb_filepath, PDBFile) model "1" chain "A" group "ATOM" residue "*"
+struc = read(pdb_filepath, PDBFile, model="1", chain="A", group="ATOM")
 
 # Run to JIT compile
-distance(struc["50"], struc["60"])
+distance(struc[50], struc[60])
 
-elapsed = @elapsed distance(struc["50"], struc["60"])
+elapsed = @elapsed distance(struc[50], struc[60])
 
 println(elapsed)

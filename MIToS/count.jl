@@ -5,11 +5,11 @@ using MIToS.PDB
 pdb_filepath = "pdbs/1AKE.pdb"
 struc = read(pdb_filepath, PDBFile)
 
-count() = length(findobjects(struc, Is(:name, "ALA")))
+counter() = count(res -> res.id.name == "ALA", struc)
 
 # Run to JIT compile
-count()
+counter()
 
-elapsed = @elapsed count()
+elapsed = @elapsed counter()
 
 println(elapsed)
