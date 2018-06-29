@@ -5,14 +5,14 @@ using BioStructures
 pdb_filepath = "pdbs/1AKE.pdb"
 struc = read(pdb_filepath, PDB)
 
-function count()
+function counter()
     alanineselector(res::AbstractResidue) = resnameselector(res, ["ALA"])
     return countresidues(struc, alanineselector)
 end
 
 # Run to JIT compile
-count()
+counter()
 
-elapsed = @elapsed count()
+elapsed = @elapsed counter()
 
 println(elapsed)
