@@ -4,11 +4,9 @@ Open source software packages to parse [Protein Data Bank](http://www.rcsb.org/p
 
 This repository aims to collate benchmarks for common tasks across various languages and packages. The collection of scripts may also be useful to get an idea how each package works.
 
-**NB - Some of the packages tested use out of date versions. I will look to fix this soon.**
-
 Please feel free to contribute scripts from other packages, or submit improvements the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
 
-Disclosure: I contributed the `Bio.Structure` module to BioJulia.
+Disclosure: I contributed the BioStructures.jl package to BioJulia.
 
 
 ## Tests
@@ -25,22 +23,22 @@ Disclosure: I contributed the `Bio.Structure` module to BioJulia.
 
 The PDB files can be downloaded to directory `pdbs` by running `source tools/download_pdbs.sh` from this directory. If you have all the software installed, and compiled where applicable, you can use the script `tools/run_benchmarks.sh` from this directory to run the benchmarks. The mean over a number of runs is taken for each benchmark to obtain the values below.
 
-Benchmarks were carried out on a 3.1 GHz Intel Core i7 processor with 16 GB 1867 MHz DDR3 RAM. The operating system was Mac OS X Yosemite 10.10.5. Time is the elapsed time.
+Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processor with 32 GB 2400 MHz DDR4 RAM. The operating system was CentOS v7.4.1708. Time is the elapsed time.
 
 
 ## Software
 
-* [BioJulia](https://biojulia.github.io/Bio.jl/) master branch running on Julia v0.5.0 (times measured after JIT compilation)
-* [MIToS](https://github.com/diegozea/MIToS.jl) v1.2.3 running on Julia v0.4.6 (times measured after JIT compilation)
-* [Biopython](http://biopython.org/wiki/Biopython) v1.66 running on Python v2.7.11
-* [ProDy](http://prody.csb.pitt.edu/) v1.7 running on Python v2.7.11
-* [MDAnalysis](http://www.mdanalysis.org/) v0.15.0 running on Python v2.7.11
-* [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.2-2 running on R v3.2.2
-* [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.2 running on R v3.2.2
-* [BioPerl](http://bioperl.org/index.html) v1.6.924 running on Perl v5.18.2
-* [BioRuby](http://bioruby.org/) v1.5.0 running on Ruby v2.0.0
-* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v6.1.0
-* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v6.1.0
+* [BioJulia](https://github.com/BioJulia/BioStructures.jl) v0.2.0 branch running on Julia v0.6.0 (times measured after JIT compilation)
+* [MIToS](https://github.com/diegozea/MIToS.jl) v2.1.1 running on Julia v0.6.0 (times measured after JIT compilation)
+* [Biopython](http://biopython.org/wiki/Biopython) v1.71 running on Python v3.6.2
+* [ProDy](http://prody.csb.pitt.edu/) v1.10.7 running on Python v3.6.2
+* [MDAnalysis](http://www.mdanalysis.org/) v0.18.0 running on Python v3.6.2
+* [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.3-4 running on R v3.5.0
+* [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.5.0
+* [BioPerl](http://bioperl.org/index.html) v1.007002 running on Perl v5.16.3
+* [BioRuby](http://bioruby.org/) v1.5.1 running on Ruby v2.0.0
+* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v4.8.5
+* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v4.8.5
 
 
 ## Comparison
@@ -91,7 +89,6 @@ If you want to contribute benchmarks for a package, please make a pull request w
 ## Plans
 
 * Test BioJava, hPDB, possibly others.
-* Finish Ramachandran scripts for remaining languages.
 * Run methods on the whole of the PDB to look at how they deal with errors.
 * Add benchmarks for parsing mmCIF, the standard PDB archive format.
 * Add benchmarks for parsing binary formats, e.g. MMTF.
