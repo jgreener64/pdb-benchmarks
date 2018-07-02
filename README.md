@@ -4,7 +4,7 @@ Open source software packages to parse [Protein Data Bank](http://www.rcsb.org/p
 
 This repository aims to collate benchmarks for common tasks across various languages and packages. The collection of scripts may also be useful to get an idea how each package works.
 
-Please feel free to contribute scripts from other packages, or submit improvements the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
+Please feel free to contribute scripts from other packages, or submit improvements to the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
 
 Disclosure: I contributed the BioStructures.jl package to BioJulia.
 
@@ -37,8 +37,8 @@ Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processo
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.5.0
 * [BioPerl](http://bioperl.org/index.html) v1.007002 running on Perl v5.16.3
 * [BioRuby](http://bioruby.org/) v1.5.1 running on Ruby v2.0.0
-* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v4.8.5
-* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v4.8.5
+* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v7.3.1
+* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v7.3.1
 
 
 ## Comparison
