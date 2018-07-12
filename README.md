@@ -74,6 +74,15 @@ Benchmarks as a plot:
 ![benchmarks](plot/plot.png "benchmarks")
 
 
+## Parsing the whole PDB
+
+It is instructive to run parsers over the whole PDB to see where errors arise. This approach has led to me submitting corrections for small mistakes (e.g. duplicate atoms, residue number errors) in a few PDB structures. As of July 2018, The PDB entries that error with the Biopython (permissive mode) and BioJulia parsers are:
+* 4UDF - mmCIF file errors in Biopython and BioJulia due to duplicate C and O atoms in Lys91 of chains B, F etc.
+* 1EJG - mmCIF file errors in Biopython due to blank and non-blank alt loc IDs at residue Pro22/Ser22.
+* 5O61 - mmCIF file errors in Biopython due to an incorrect residue number at line 165,223.
+Running Biopython in non-permissive mode picks up more potential problems such as broken chains and mixed blank/non-blank alt loc IDs. For further discussion on errors in PDB files see the Biopython [documentation](http://biopython.org/DIST/docs/tutorial/Tutorial.pdf). The scripts to reproduce the whole PDB checking can be found in `checkwholepdb`. There is also a script to check recent PDB changes that can be run as a CRON job.
+
+
 ## Opinions
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
@@ -89,7 +98,6 @@ If you want to contribute benchmarks for a package, please make a pull request w
 ## Plans
 
 * Test BioJava, hPDB, possibly others.
-* Run methods on the whole of the PDB to look at how they deal with errors.
 * Add benchmarks for parsing mmCIF, the standard PDB archive format.
 * Add benchmarks for parsing binary formats, e.g. MMTF.
 
@@ -99,5 +107,5 @@ If you want to contribute benchmarks for a package, please make a pull request w
 * Benchmarks for mmCIF parsing can be found [here](https://github.com/project-gemmi/mmcif-benchmark).
 * The PDB file format documentation can be found [here](http://www.wwpdb.org/documentation/file-format).
 * A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries/).
-* The Biopython [documentation](http://biopython.org/wiki/The_Biopython_Structural_Bioinformatics_FAQ) has a useful discussion on disorder at the atom and residue level.
+* The Biopython [documentation](http://biopython.org/DIST/docs/tutorial/Tutorial.pdf) has a useful discussion on disorder at the atom and residue level.
 * Sets of utility scripts exist including [pdbtools](https://github.com/harmslab/pdbtools), [pdb-tools](https://github.com/JoaoRodrigues/pdb-tools) and [PDBFixer](https://github.com/pandegroup/pdbfixer).
