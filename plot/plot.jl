@@ -1,9 +1,11 @@
 # Plot benchmark results
 
-using DataFrames
+using CSV
 using Gadfly
+using Cairo
+using Fontconfig
 
-df = readtable("benchmarks.csv")
+df = CSV.read("benchmarks.csv")
 
 p = plot(df,
     x=:package,

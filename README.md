@@ -6,7 +6,7 @@ This repository aims to collate benchmarks for common tasks across various langu
 
 Please feel free to contribute scripts from other packages, or submit improvements to the scripts already present - I'm looking for the fastest implementation for each software that makes use of the provided API.
 
-Disclosure: I contributed the BioStructures.jl package to BioJulia.
+Disclosure: I contributed the BioStructures.jl package to BioJulia and have made contributions to Biopython.
 
 
 ## Tests
@@ -28,11 +28,11 @@ Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processo
 
 ## Software
 
-* [BioJulia](https://github.com/BioJulia/BioStructures.jl) v0.2.0 branch running on Julia v0.6.0 (times measured after JIT compilation)
-* [MIToS](https://github.com/diegozea/MIToS.jl) v2.1.1 running on Julia v0.6.0 (times measured after JIT compilation)
-* [Biopython](http://biopython.org/wiki/Biopython) v1.71 running on Python v3.6.2
-* [ProDy](http://prody.csb.pitt.edu/) v1.10.7 running on Python v3.6.2
-* [MDAnalysis](http://www.mdanalysis.org/) v0.18.0 running on Python v3.6.2
+* [BioJulia](https://github.com/BioJulia/BioStructures.jl) v0.6.0 running on Julia v1.1.0 (times measured after JIT compilation)
+* [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.1.0 (times measured after JIT compilation)
+* [Biopython](http://biopython.org/wiki/Biopython) v1.74 running on Python v3.7.3
+* [ProDy](http://prody.csb.pitt.edu/) v1.10.10 running on Python v3.7.3
+* [MDAnalysis](http://www.mdanalysis.org/) v0.20.1 running on Python v3.7.3
 * [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.3-4 running on R v3.5.0
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.5.0
 * [BioPerl](http://bioperl.org/index.html) v1.007002 running on Perl v5.16.3
