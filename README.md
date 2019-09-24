@@ -12,12 +12,12 @@ Disclosure: I contributed the BioStructures.jl package to BioJulia and have made
 ## Tests
 
 * Parsing 3 PDB files, taken from the benchmarking in [1]:
-  * [1CRN](http://www.rcsb.org/pdb/explore/explore.do?structureId=1crn) - hydrophobic protein (327 atoms)
-  * [3JYV](http://www.rcsb.org/pdb/explore/explore.do?structureId=3jyv) - 80S rRNA (57,327 atoms)
-  * [1HTQ](http://www.rcsb.org/pdb/explore/explore.do?structureId=1htq) - multicopy glutamine synthetase (10 models of 97,872 atoms)
-* Counting the number of alanine residues in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
-* Calculating the distance between residues 50 and 60 of chain A in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
-* Calculating the Ramachandran phi/psi angles in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake))
+  * [1CRN](http://www.rcsb.org/pdb/explore/explore.do?structureId=1crn) - hydrophobic protein (327 atoms).
+  * [3JYV](http://www.rcsb.org/pdb/explore/explore.do?structureId=3jyv) - 80S rRNA (57,327 atoms).
+  * [1HTQ](http://www.rcsb.org/pdb/explore/explore.do?structureId=1htq) - multicopy glutamine synthetase (10 models of 97,872 atoms).
+* Counting the number of alanine residues in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
+* Calculating the distance between residues 50 and 60 of chain A in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
+* Calculating the Ramachandran phi/psi angles in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
 
 [1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 | [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
 
@@ -28,38 +28,38 @@ Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processo
 
 ## Software
 
-* [BioJulia](https://github.com/BioJulia/BioStructures.jl) v0.6.0 running on Julia v1.1.0 (times measured after JIT compilation)
-* [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.1.0 (times measured after JIT compilation)
-* [Biopython](http://biopython.org/wiki/Biopython) v1.74 running on Python v3.7.3
-* [ProDy](http://prody.csb.pitt.edu/) v1.10.10 running on Python v3.7.3
-* [MDAnalysis](http://www.mdanalysis.org/) v0.20.1 running on Python v3.7.3
-* [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.3-4 running on R v3.5.0
-* [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.5.0
-* [BioPerl](http://bioperl.org/index.html) v1.007002 running on Perl v5.16.3
-* [BioRuby](http://bioruby.org/) v1.5.1 running on Ruby v2.0.0
-* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v7.3.1
-* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v7.3.1
+* [BioJulia](https://github.com/BioJulia/BioStructures.jl) v0.6.0 running on Julia v1.1.0 (times measured after JIT compilation).
+* [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.1.0 (times measured after JIT compilation).
+* [Biopython](http://biopython.org/wiki/Biopython) v1.74 running on Python v3.7.3.
+* [ProDy](http://prody.csb.pitt.edu/) v1.10.10 running on Python v3.7.3.
+* [MDAnalysis](http://www.mdanalysis.org/) v0.20.1 running on Python v3.7.3.
+* [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.3-4 running on R v3.5.0.
+* [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.5.0.
+* [BioPerl](http://bioperl.org/index.html) v1.007002 running on Perl v5.16.3.
+* [BioRuby](http://bioruby.org/) v1.5.1 running on Ruby v2.0.0.
+* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v7.3.1.
+* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v7.3.1.
 
 
 ## Comparison
 
 Note that direct comparison between these times should be treated with caution, as each package does something slightly different. For example, things that increase parsing time include:
 
-* Parsing the PDB header
-* Accounting for disorder at both the atom and residue (point mutation) level
-* Forming a heirarchical model of the protein that makes access to specific residues, atoms etc. easier and faster after parsing
-* Checking that the PDB format is adhered to at various levels of strictness
+* Parsing the PDB header.
+* Accounting for disorder at both the atom and residue (point mutation) level.
+* Forming a heirarchical model of the protein that makes access to specific residues, atoms etc. easier and faster after parsing.
+* Checking that the PDB format is adhered to at various levels of strictness.
 
 Each package supports these to varying degrees.
 
 |                       | BioJulia     | MIToS        | Biopython    | ProDy        | MDAnalysis   | Bio3D        | Rpdb         | BioPerl       | BioRuby      | Victor        | ESBTL        |
 | :-------------------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :----------- | :------------ | :----------- | :------------ | :----------- |
-| Parse 1CRN / ms       | 1.3          | 1.9          | 8.0          | 4.2          | 7.4          | 13           | 12           | 72            | 49           | 35            | 4.5          |
-| Parse 3JYV / s        | 0.42         | 0.39         | 1.1          | 0.47         | 0.54         | 0.85         | 1.3          | 3.8           | 1.4          | 9.9           | 0.65         |
-| Parse 1HTQ / s        | 5.5          | 17           | 24           | 2.0          | 2.2          | 4.5          | 22           | 81            | 23           | 25            | -            |
-| Count / ms            | 0.74         | 0.078        | 0.52         | 14           | 0.15         | 0.23         | 0.28         | 1.2           | 0.23         | -             | -            |
-| Distance / ms         | 0.068        | 0.010        | 0.54         | 72           | 1.1          | 26           | 1.6          | 1.3           | 1.9          | -             | -            |
-| Ramachandran / ms     | 6.9          | -            | 150          | 330          | 2000         | -            | -            | -             | -            | -             | -            |
+| Parse 1CRN / ms       | 7.7          | 6.2          | 7.4          | 3.5          | 5.4          | 13           | 10           | 58            | 26           | 11            | 2.8          |
+| Parse 3JYV / s        | 0.18         | 0.16         | 0.76         | 0.99         | 0.43         | 0.83         | 0.71         | 3.2           | 0.78         | 7.8           | 0.46         |
+| Parse 1HTQ / s        | 2.4          | 4.0          | 15           | 2.2          | 1.5          | 3.8          | 15           | 57            | 14           | 16            | -            |
+| Count / ms            | 0.21         | 0.018        | 0.26         | 11           | 0.098        | 0.22         | 0.26         | 0.63          | 0.12         | -             | -            |
+| Distance / ms         | 0.016        | 0.0033       | 0.23         | 60           | 0.88         | 20           | 1.5          | 0.72          | 0.40         | -             | -            |
+| Ramachandran / ms     | 5.5          | -            | 110          | 280          | 1300         | -            | -            | -             | -            | -             | -            |
 | Language              | Julia        | Julia        | Python       | Python       | Python       | R            | R            | Perl          | Ruby         | C++           | C++          |
 | Parses header         | ✗            | ✗            | ✓            | ✓            | ✗            | ✓            | ✓            | ✗             | ✓            | ✓             | ✗            |
 | Hierarchichal parsing | ✓            | ✗            | ✓            | ✓            | ✓            | ✗            | ✗            | ✓             | ✓            | ✓             | ✓            |
