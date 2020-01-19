@@ -65,7 +65,7 @@ Each package supports these to varying degrees.
 | Hierarchichal parsing | ✓            | ✗            | ✓            | ✓            | ✓            | ✗            | ✗            | ✓             | ✓            | ✓             | ✓            |
 | Supports disorder     | ✓            | ✗            | ✓            | ✗            | ✗            | ✗            | ✗            | ✗             | ✗            | ✗             | ✓            |
 | Writes PDBs           | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✓             | ✗            | ✓             | ✓            |
-| Superimposition       | ✗            | ✓            | ✓            | ✓            | ✓            | ✓            | ✗            | ✗             | ✗            | ✗             | ✗            |
+| Superimposition       | ✓            | ✓            | ✓            | ✓            | ✓            | ✓            | ✗            | ✗             | ✗            | ✗             | ✗            |
 | PCA                   | ✗            | ✗            | ✗            | ✓            | ✓            | ✓            | ✗            | ✗             | ✗            | ✗             | ✗            |
 | License               | MIT          | MIT          | Biopython    | MIT          | GPLv2        | GPLv2        | GPL          | GPL/Artistic  | Ruby         | GPLv3         | GPLv3        |
 
