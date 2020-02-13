@@ -28,14 +28,14 @@ function run_benchmark {
     python tools/mean.py $3 >> benchmarks.csv
 }
 
-# BioJulia
-run_benchmark $nb "julia BioJulia/parse.jl pdbs/1CRN.pdb"    "BioJulia/parse_1CRN.dat"     "BioJulia,parse 1CRN,"
-run_benchmark $nb "julia BioJulia/parse.jl pdbs/3JYV.pdb"    "BioJulia/parse_3JYV.dat"     "BioJulia,parse 3JYV,"
-run_benchmark $ns "julia BioJulia/parse.jl pdbs/1HTQ.pdb"    "BioJulia/parse_1HTQ.dat"     "BioJulia,parse 1HTQ,"
-run_benchmark $nb "julia BioJulia/count.jl"                  "BioJulia/count.dat"          "BioJulia,count,"
-run_benchmark $nb "julia BioJulia/distance.jl"               "BioJulia/distance.dat"       "BioJulia,distance,"
-run_benchmark $nb "julia BioJulia/ramachandran.jl"           "BioJulia/ramachandran.dat"   "BioJulia,ramachandran,"
-echo "BioJulia benchmarks done"
+# BioStructures
+run_benchmark $nb "julia BioStructures/parse.jl pdbs/1CRN.pdb"    "BioStructures/parse_1CRN.dat"     "BioStructures,parse 1CRN,"
+run_benchmark $nb "julia BioStructures/parse.jl pdbs/3JYV.pdb"    "BioStructures/parse_3JYV.dat"     "BioStructures,parse 3JYV,"
+run_benchmark $ns "julia BioStructures/parse.jl pdbs/1HTQ.pdb"    "BioStructures/parse_1HTQ.dat"     "BioStructures,parse 1HTQ,"
+run_benchmark $nb "julia BioStructures/count.jl"                  "BioStructures/count.dat"          "BioStructures,count,"
+run_benchmark $nb "julia BioStructures/distance.jl"               "BioStructures/distance.dat"       "BioStructures,distance,"
+run_benchmark $nb "julia BioStructures/ramachandran.jl"           "BioStructures/ramachandran.dat"   "BioStructures,ramachandran,"
+echo "BioStructures benchmarks done"
 
 # MIToS
 run_benchmark $nb "julia MIToS/parse.jl pdbs/1CRN.pdb"      "MIToS/parse_1CRN.dat"        "MIToS,parse 1CRN,"

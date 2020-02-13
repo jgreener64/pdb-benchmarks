@@ -2,7 +2,7 @@
 
 import time
 from Bio.PDB import PDBParser
-from Bio.PDB.Vector import calc_dihedral
+from Bio.PDB.vectors import calc_dihedral
 
 pdb_filepath = "pdbs/1AKE.pdb"
 parser = PDBParser()
