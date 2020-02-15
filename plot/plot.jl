@@ -5,7 +5,7 @@ using Gadfly
 using Cairo
 using Fontconfig
 
-df = CSV.read("C:\\Users\\Joe\\software\\pdb-benchmarks\\benchmarks.csv")
+df = CSV.read("benchmarks.csv")
 
 theme = Theme(
     background_color="white",
@@ -27,4 +27,4 @@ p = Gadfly.with_theme(theme) do
     )
 end
 
-draw(PNG("C:\\Users\\Joe\\software\\pdb-benchmarks\\plot\\plot.png", dpi=300), p)
+draw(PNG("plot/plot.png", dpi=300), p)
