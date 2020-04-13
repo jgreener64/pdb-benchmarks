@@ -120,6 +120,18 @@ run_benchmark $nb "Rscript Rpdb/count.R"                   "Rpdb/count.dat"     
 run_benchmark $nb "Rscript Rpdb/distance.R"                "Rpdb/distance.dat"       "Rpdb,Distance,"
 echo "Rpdb benchmarks done"
 
+# BioJava
+run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_pdb data/1CRN.pdb"   "BioJava/parse_pdb_1CRN.dat"   "BioJava,Parse PDB 1CRN,"
+run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_pdb data/3JYV.pdb"   "BioJava/parse_pdb_3JYV.dat"   "BioJava,Parse PDB 3JYV,"
+run_benchmark $ns "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_pdb data/1HTQ.pdb"   "BioJava/parse_pdb_1HTQ.dat"   "BioJava,Parse PDB 1HTQ,"
+run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmcif data/1CRN.cif" "BioJava/parse_mmcif_1CRN.dat" "BioJava,Parse mmCIF 1CRN,"
+run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmcif data/3JYV.cif" "BioJava/parse_mmcif_3JYV.dat" "BioJava,Parse mmCIF 3JYV,"
+run_benchmark $ns "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmcif data/1HTQ.cif" "BioJava/parse_mmcif_1HTQ.dat" "BioJava,Parse mmCIF 1HTQ,"
+run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmtf data/1CRN.mmtf" "BioJava/parse_mmtf_1CRN.dat"  "BioJava,Parse MMTF 1CRN,"
+run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmtf data/3JYV.mmtf" "BioJava/parse_mmtf_3JYV.dat"  "BioJava,Parse MMTF 3JYV,"
+run_benchmark $ns "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmtf data/1HTQ.mmtf" "BioJava/parse_mmtf_1HTQ.dat"  "BioJava,Parse MMTF 1HTQ,"
+echo "BioJava benchmarks done"
+
 # BioPerl
 run_benchmark $nb "perl BioPerl/parse_pdb.pl data/1CRN.pdb" "BioPerl/parse_pdb_1CRN.dat" "BioPerl,Parse PDB 1CRN,"
 run_benchmark $nb "perl BioPerl/parse_pdb.pl data/3JYV.pdb" "BioPerl/parse_pdb_3JYV.dat" "BioPerl,Parse PDB 3JYV,"

@@ -1,6 +1,8 @@
 data/
 *.dat
-todo.txt
+.Rhistory
+BioJava/target
+BioJava/dependency-reduced-pom.xml
 GEMMI/gemmi
 GEMMI/parse_pdb
 GEMMI/parse_mmcif
@@ -13,3 +15,4 @@ ESBTL/cmake_install.cmake
 ESBTL/parse_pdb
 *~
 *.swp
+todo.txt
