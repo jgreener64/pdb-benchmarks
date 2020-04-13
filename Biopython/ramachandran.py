@@ -4,7 +4,7 @@ import time
 from Bio.PDB import PDBParser
 from Bio.PDB.vectors import calc_dihedral
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 parser = PDBParser()
 struc = parser.get_structure("", pdb_filepath)
 

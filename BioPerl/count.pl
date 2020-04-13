@@ -4,7 +4,7 @@ use Bio::Structure::IO;
 use Time::HiRes qw(time);
 use strict;
 
-my $pdb_filepath = "pdbs/1AKE.pdb";
+my $pdb_filepath = "data/1AKE.pdb";
 my $structio = Bio::Structure::IO->new(-file => $pdb_filepath);
 my $struc = $structio->next_structure;
 

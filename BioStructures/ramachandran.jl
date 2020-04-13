@@ -2,7 +2,7 @@
 
 using BioStructures
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 struc = read(pdb_filepath, PDB)
 
 # Run to JIT compile

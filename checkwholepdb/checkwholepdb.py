@@ -7,7 +7,6 @@ from math import ceil
 from Bio.PDB import PDBList
 from Bio.PDB.PDBParser import PDBParser
 from Bio.PDB.MMCIFParser import MMCIFParser
-from Bio.PDB.mmtf import MMTFParser
 
 start = datetime.now()
 basedir = "."

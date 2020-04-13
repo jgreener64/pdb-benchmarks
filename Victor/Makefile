@@ -11,8 +11,8 @@ CC=g++
 CFLAGS=-I. -ansi -pedantic -DNEXCEPTIONS -DLINUX -c -O3 -ffast-math -DNDEBUG -ftemplate-depth-36 -Wno-reorder  -Wno-uninitialized -Wno-write-strings -Wno-narrowing
 
 install:
-	$(CC)   $(CFLAGS)   $(INC_PATH) -c parse.cc -o parse.o
-	$(CC)   parse.o -o parse $(LIB_PATH) $(LIBS)
+	$(CC)   $(CFLAGS)   $(INC_PATH) -c parse_pdb.cc -o parse_pdb.o
+	$(CC)   parse_pdb.o -o parse_pdb $(LIB_PATH) $(LIBS)
 
 clean:
-	rm parse.o parse
+	rm parse_pdb.o parse_pdb

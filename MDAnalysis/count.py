@@ -3,7 +3,7 @@
 import time
 import MDAnalysis as mda
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 u = mda.Universe(pdb_filepath)
 
 def count():

@@ -3,7 +3,7 @@
 require "bio"
 require "benchmark"
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 pdb = Bio::PDB.new(File.read(pdb_filepath))
 
 elapsed = Benchmark.realtime {

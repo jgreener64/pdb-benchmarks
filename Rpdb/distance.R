@@ -5,7 +5,7 @@
 library(Rpdb)
 library(microbenchmark)
 
-pdb_filepath <- "pdbs/1AKE.pdb"
+pdb_filepath <- "data/1AKE.pdb"
 struc <- read.pdb(pdb_filepath)
 
 distance <- function() {

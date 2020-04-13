@@ -12,7 +12,7 @@ outstrs = ["Checking all PDB entries at $(now())",
 
 for p in sort(pdblist)
     try
-        downloadpdb(p, pdb_dir=basedir, file_format=PDB)
+        downloadpdb(p, dir=basedir, format=PDB)
     catch
         # Not having a PDB file is acceptable, though a failure to download an
         #   available file may hide an error in parsing
@@ -27,7 +27,7 @@ for p in sort(pdblist)
         rm("$basedir/$p.pdb")
     end
     try
-        downloadpdb(p, pdb_dir=basedir, file_format=MMCIF)
+        downloadpdb(p, dir=basedir, format=MMCIF)
     catch
         rm("$basedir/$p.cif", force=true)
         push!(outstrs, "$p - no mmCIF download")

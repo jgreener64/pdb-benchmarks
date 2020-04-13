@@ -5,7 +5,7 @@
 import time
 from prody import *
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 struc = parsePDB(pdb_filepath)
 
 def distance():

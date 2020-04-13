@@ -21,24 +21,28 @@ Disclosure: I contributed the BioStructures.jl package to BioJulia and have made
 
 [1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 | [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
 
-The PDB files can be downloaded to directory `pdbs` by running `source tools/download_pdbs.sh` from this directory. If you have all the software installed, and compiled where applicable, you can use the script `tools/run_benchmarks.sh` from this directory to run the benchmarks. The mean over a number of runs is taken for each benchmark to obtain the values below.
+The PDB files can be downloaded to directory `data` by running `source tools/download_data.sh` from this directory. If you have all the software installed, and compiled where applicable, you can use the script `tools/run_benchmarks.sh` from this directory to run the benchmarks. The mean over a number of runs is taken for each benchmark to obtain the values below.
 
 Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processor with 32 GB 2400 MHz DDR4 RAM. The operating system was CentOS v8.1. Time is the elapsed time.
 
 
 ## Software
 
-* [BioStructures](https://github.com/BioJulia/BioStructures.jl) v0.9.2 running on Julia v1.3.1 (times measured after JIT compilation).
+* [BioStructures](https://github.com/BioJulia/BioStructures.jl) v0.10.0 running on Julia v1.3.1 (times measured after JIT compilation).
 * [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.3.1 (times measured after JIT compilation).
 * [Biopython](http://biopython.org/wiki/Biopython) v1.76 running on Python v3.7.4.
-* [ProDy](http://prody.csb.pitt.edu/) v1.10.11 running on Python v3.7.4.
-* [MDAnalysis](http://www.mdanalysis.org/) v0.20.1 running on Python v3.7.4.
+* [ProDy](http://prody.csb.pitt.edu) v1.10.11 running on Python v3.7.4.
+* [MDAnalysis](http://www.mdanalysis.org) v0.20.1 running on Python v3.7.4.
+* [biotite](https://www.biotite-python.org) v0.20.1 running on Python v3.7.4.
+* [atomium](https://github.com/samirelanduk/atomium) v1.0.2 running on Python v3.7.4.
 * [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.4.1 running on R v3.6.2.
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.6.2.
+* [BioJava](https://biojava.org) v5.3.0 running on Java v1.8.0.
 * [BioPerl](http://bioperl.org/index.html) v1.007002 running on Perl v5.26.3.
-* [BioRuby](http://bioruby.org/) v2.0.1 running on Ruby v2.5.5.
-* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with g++ v7.3.1.
-* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with g++ v7.3.1.
+* [BioRuby](http://bioruby.org) v2.0.1 running on Ruby v2.5.5.
+* [GEMMI](https://gemmi.readthedocs.io/en/latest/index.html) v0.3.6 compiled with gcc v8.3.1.
+* [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with gcc v7.3.1.
+* [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with gcc v7.3.1.
 
 
 ## Comparison
@@ -48,6 +52,7 @@ Note that direct comparison between these times should be treated with caution, 
 * Parsing the PDB header.
 * Accounting for disorder at both the atom and residue (point mutation) level.
 * Forming a heirarchical model of the protein that makes access to specific residues, atoms etc. easier and faster after parsing.
+* Allowing models in a file to have different atoms present.
 * Checking that the PDB format is adhered to at various levels of strictness.
 
 Each package supports these to varying degrees.
@@ -88,7 +93,7 @@ Running Biopython in non-permissive mode picks up more potential problems such a
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
 * If you are analysing ensembles of proteins use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
-* For fast parsing, consider using a binary format such as [MMTF](http://mmtf.rcsb.org/) or [binaryCIF](https://github.com/dsehnal/BinaryCIF).
+* For fast parsing, consider using a binary format such as [MMTF](http://mmtf.rcsb.org) or [binaryCIF](https://github.com/dsehnal/BinaryCIF).
 
 
 ## Contributing
@@ -96,17 +101,10 @@ Running Biopython in non-permissive mode picks up more potential problems such a
 If you want to contribute benchmarks for a package, please make a pull request with the script(s) in a directory like the other packages. I will run the benchmarks again and change the README, thanks.
 
 
-## Plans
-
-* Test BioJava, hPDB, possibly others.
-* Add benchmarks for parsing mmCIF, the standard PDB archive format.
-* Add benchmarks for parsing binary formats, e.g. MMTF.
-
-
 ## Resources
 
 * Benchmarks for mmCIF parsing can be found [here](https://github.com/project-gemmi/mmcif-benchmark).
 * The PDB file format documentation can be found [here](http://www.wwpdb.org/documentation/file-format).
-* A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries/).
+* A list of PDB parsing packages, particularly in C/C++, can be found [here](http://bioinf.org.uk/software/bioplib/libraries).
 * The Biopython [documentation](http://biopython.org/DIST/docs/tutorial/Tutorial.pdf) has a useful discussion on disorder at the atom and residue level.
 * Sets of utility scripts exist including [pdbtools](https://github.com/harmslab/pdbtools), [pdb-tools](https://github.com/JoaoRodrigues/pdb-tools) and [PDBFixer](https://github.com/pandegroup/pdbfixer).

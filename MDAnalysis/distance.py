@@ -6,7 +6,7 @@ import time
 import MDAnalysis as mda
 from MDAnalysis.lib.distances import distance_array
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 u = mda.Universe(pdb_filepath)
 
 def distance():

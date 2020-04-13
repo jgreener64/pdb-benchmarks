@@ -2,7 +2,7 @@
 
 using MIToS.PDB
 
-pdb_filepath = "pdbs/1AKE.pdb"
+pdb_filepath = "data/1AKE.pdb"
 struc = read(pdb_filepath, PDBFile)
 
 counter() = count(res -> res.id.name == "ALA", struc)
