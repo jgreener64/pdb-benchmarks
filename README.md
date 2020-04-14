@@ -17,9 +17,9 @@ Disclosure: I contributed the BioStructures.jl package to BioJulia and have made
 * Calculating the distance between residues 50 and 60 of chain A in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
 * Calculating the Ramachandran phi/psi angles in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
 
-[1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 | [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
+[1] Gajda MJ, hPDB - Haskell library for processing atomic biomolecular structures in protein data bank format, *BMC Research Notes* 2013, **6**:483 - [link](http://bmcresnotes.biomedcentral.com/articles/10.1186/1756-0500-6-483)
 
-The PDB files can be downloaded to directory `data` by running `julia tools/download_data.jl` from this directory. If you have all the software installed, and compiled where applicable, you can use the script `tools/run_benchmarks.sh` from this directory to run the benchmarks and store the results in `benchmarks.csv`. The mean over a number of runs is taken for each benchmark to obtain the values below.
+The PDB files can be downloaded to directory `data` by running `julia tools/download_data.jl` from this directory. If you have all the software installed, and compiled where applicable, you can run `sh tools/run_benchmarks.sh` from this directory to run the benchmarks and store the results in `benchmarks.csv`. The mean over a number of runs is taken for each benchmark to obtain the values below.
 
 Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processor with 32 GB 2400 MHz DDR4 RAM. The operating system was CentOS v8.1. Time is the elapsed time.
 
@@ -91,8 +91,8 @@ Running Biopython in non-permissive mode picks up more potential problems such a
 
 * For most purposes, particularly work on small numbers of files, the speed of the programs will not hold you back. In this case use the language/package you are most familiar with.
 * For fast parsing, use a binary format such as [MMTF](http://mmtf.rcsb.org) or [binaryCIF](https://github.com/dsehnal/BinaryCIF).
-* Whilst mmCIF became the standard PDB archive format in 2014, and is a very flexible archive format, that does not mean that it the best choice for all of bioinformatics. mmCIF files take up a lot of space on disk, are slowest to read and do not yet work with many bioinformatics tools.
-* If you are analysing ensembles of proteins use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
+* Whilst mmCIF became the standard PDB archive format in 2014, and is a very flexible archive format, that does not mean that it is the best choice for all of bioinformatics. mmCIF files take up a lot of space on disk, are slowest to read and do not yet work with many bioinformatics tools.
+* If you are analysing ensembles of proteins then use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
 
 ## Contributing
 
