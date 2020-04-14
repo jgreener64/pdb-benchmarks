@@ -128,7 +128,6 @@ run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.j
 run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmcif data/3JYV.cif" "BioJava/parse_mmcif_3JYV.dat" "BioJava,Parse mmCIF 3JYV,"
 run_benchmark $ns "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmcif data/1HTQ.cif" "BioJava/parse_mmcif_1HTQ.dat" "BioJava,Parse mmCIF 1HTQ,"
 run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmtf data/1CRN.mmtf" "BioJava/parse_mmtf_1CRN.dat"  "BioJava,Parse MMTF 1CRN,"
-run_benchmark $nb "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmtf data/3JYV.mmtf" "BioJava/parse_mmtf_3JYV.dat"  "BioJava,Parse MMTF 3JYV,"
 run_benchmark $ns "java -cp BioJava/target/pdb-benchmarks-1.0-SNAPSHOT.jar com.jgreener.pdb.parse_mmtf data/1HTQ.mmtf" "BioJava/parse_mmtf_1HTQ.dat"  "BioJava,Parse MMTF 1HTQ,"
 echo "BioJava benchmarks done"
 
