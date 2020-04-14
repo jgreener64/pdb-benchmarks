@@ -26,8 +26,8 @@ Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processo
 ## Software
 
 Currently, 15 packages across 7 programming languages are included in the benchmarks:
-* [BioStructures](https://github.com/BioJulia/BioStructures.jl) v0.10.0 running on Julia v1.3.1 (times measured after JIT compilation).
-* [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.3.1 (times measured after JIT compilation).
+* [BioStructures](https://github.com/BioJulia/BioStructures.jl) v0.10.0 running on Julia v1.3.1; times measured after JIT compilation.
+* [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.3.1; times measured after JIT compilation.
 * [Biopython](http://biopython.org/wiki/Biopython) v1.76 running on Python v3.7.4.
 * [ProDy](http://prody.csb.pitt.edu) v1.10.11 running on Python v3.7.4.
 * [MDAnalysis](http://www.mdanalysis.org) v0.20.1 running on Python v3.7.4.
