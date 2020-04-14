@@ -17,13 +17,10 @@ end
 
 for (benchmark, label, millisecond) in (
                             ("Parse PDB 1CRN"  , "Parse PDB 1CRN / ms"  , true ),
-                            ("Parse PDB 3JYV"  , "Parse PDB 3JYV / s"   , false),
                             ("Parse PDB 1HTQ"  , "Parse PDB 1HTQ / s"   , false),
                             ("Parse mmCIF 1CRN", "Parse mmCIF 1CRN / ms", true ),
-                            ("Parse mmCIF 3JYV", "Parse mmCIF 3JYV / s" , false),
                             ("Parse mmCIF 1HTQ", "Parse mmCIF 1HTQ / s" , false),
                             ("Parse MMTF 1CRN" , "Parse MMTF 1CRN / ms" , true ),
-                            ("Parse MMTF 3JYV" , "Parse MMTF 3JYV / s"  , false),
                             ("Parse MMTF 1HTQ" , "Parse MMTF 1HTQ / s"  , false),
                             ("Count"           , "Count / ms"           , true ),
                             ("Distance"        , "Distance / ms"        , true ),

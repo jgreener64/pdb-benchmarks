@@ -11,9 +11,8 @@ Disclosure: I contributed the BioStructures.jl package to BioJulia and have made
 
 ## Tests
 
-* Parsing 3 PDB files, taken from the benchmarking in [1]:
+* Parsing 2 PDB entries, taken from the benchmarking in [1], in the PDB, mmCIF and MMTF formats:
   * [1CRN](http://www.rcsb.org/pdb/explore/explore.do?structureId=1crn) - hydrophobic protein (327 atoms).
-  * [3JYV](http://www.rcsb.org/pdb/explore/explore.do?structureId=3jyv) - 80S rRNA (57,327 atoms).
   * [1HTQ](http://www.rcsb.org/pdb/explore/explore.do?structureId=1htq) - multicopy glutamine synthetase (10 models of 97,872 atoms).
 * Counting the number of alanine residues in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
 * Calculating the distance between residues 50 and 60 of chain A in adenylate kinase ([1AKE](http://www.rcsb.org/pdb/explore/explore.do?structureId=1ake)).
@@ -60,7 +59,6 @@ Each package supports these to varying degrees.
 |                       | BioStructures | MIToS         | Biopython     | ProDy         | MDAnalysis    | Bio3D         | Rpdb          | BioPerl       | BioRuby       | Victor        | ESBTL         |
 | :-------------------- | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ |
 | Parse 1CRN / ms       | 0.79          | 0.63          | 7.9           | 3.1           | 5.1           | 9.8           | 9.8           | 43            | 22            | 7.8           | 2.6           |
-| Parse 3JYV / s        | 0.13          | 0.11          | 0.80          | 0.42          | 0.44          | 0.58          | 0.68          | 2.7           | 0.63          | 5.2           | 0.40          |
 | Parse 1HTQ / s        | 3.7           | 2.9           | 17            | 2.2           | 1.5           | 2.9           | 14            | 49            | 13            | 11            | -             |
 | Count / ms            | 0.18          | 0.017         | 0.25          | 9.7           | 0.077         | 0.17          | 0.19          | 0.52          | 0.089         | -             | -             |
 | Distance / ms         | 0.012         | 0.0041        | 0.28          | 52            | 0.68          | 19            | 1.4           | 0.61          | 0.38          | -             | -             |
