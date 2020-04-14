@@ -27,7 +27,8 @@ for (benchmark, label, millisecond) in (
                             ("Ramachandran"    , "Ramachandran / ms"    , true ))
     print("| $(rpad(label, 21)) |")
     for software in ("BioStructures", "MIToS", "Biopython", "ProDy", "MDAnalysis", "biotite",
-                        "atomium", "Bio3D", "Rpdb", "BioPerl", "BioRuby", "Victor", "ESBTL")
+                        "atomium", "Bio3D", "Rpdb", "BioJava", "BioPerl", "BioRuby", "GEMMI",
+                        "Victor", "ESBTL")
         if haskey(times[benchmark], software)
             if millisecond
                 val = string(round(1000 * times[benchmark][software], sigdigits=2))
