@@ -13,6 +13,12 @@ ESBTL/CMakeCache.txt
 ESBTL/Makefile
 ESBTL/cmake_install.cmake
 ESBTL/parse_pdb
+chemfiles/parse_pdb
+chemfiles/parse_mmcif
+chemfiles/parse_mmtf
+chemfiles/count
+chemfiles/distance
+chemfiles/ramachandran
 *~
 *.swp
 todo.txt

@@ -7,7 +7,7 @@ import MDAnalysis as mda
 pdb_filepath = sys.argv[1]
 
 start = time.time()
-mda.Universe(pdb_filepath)
+mda.coordinates.PDB.PDBReader(pdb_filepath)
 end = time.time()
 
 print(end - start)

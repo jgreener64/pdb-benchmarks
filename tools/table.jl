@@ -28,7 +28,7 @@ for (benchmark, label, millisecond) in (
     print("| $(rpad(label, 21)) |")
     for software in ("BioStructures", "MIToS", "Biopython", "ProDy", "MDAnalysis", "biotite",
                         "atomium", "Bio3D", "Rpdb", "BioJava", "BioPerl", "BioRuby", "GEMMI",
-                        "Victor", "ESBTL")
+                        "Victor", "ESBTL", "chemfiles-python", "chemfiles-cxx")
         if haskey(times[benchmark], software)
             if millisecond
                 val = string(round(1000 * times[benchmark][software], sigdigits=2))
@@ -38,7 +38,7 @@ for (benchmark, label, millisecond) in (
         else
             val = "-"
         end
-        print(" $(rpad(val, 13)) |")
+        print(" $(rpad(val, 16)) |")
     end
     println()
 end

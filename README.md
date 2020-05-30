@@ -25,14 +25,14 @@ Benchmarks were carried out on an Intel Xeon CPU E5-1620 v3 3.50GHz x 8 processo
 
 ## Software
 
-Currently, 15 packages across 7 programming languages are included in the benchmarks:
+Currently, 16 packages across 7 programming languages are included in the benchmarks:
 * [BioStructures](https://github.com/BioJulia/BioStructures.jl) v0.10.0 running on Julia v1.3.1; times measured after JIT compilation.
 * [MIToS](https://github.com/diegozea/MIToS.jl) v2.4.0 running on Julia v1.3.1; times measured after JIT compilation.
-* [Biopython](http://biopython.org/wiki/Biopython) v1.76 running on Python v3.7.4.
-* [ProDy](http://prody.csb.pitt.edu) v1.10.11 running on Python v3.7.4.
-* [MDAnalysis](http://www.mdanalysis.org) v0.20.1 running on Python v3.7.4.
-* [biotite](https://www.biotite-python.org) v0.20.1 running on Python v3.7.4.
-* [atomium](https://github.com/samirelanduk/atomium) v1.0.2 running on Python v3.7.4.
+* [Biopython](http://biopython.org/wiki/Biopython) v1.76 running on Python v3.7.6.
+* [ProDy](http://prody.csb.pitt.edu) v1.10.11 running on Python v3.7.6.
+* [MDAnalysis](http://www.mdanalysis.org) v0.20.1 running on Python v3.7.6.
+* [biotite](https://www.biotite-python.org) v0.20.1 running on Python v3.7.6.
+* [atomium](https://github.com/samirelanduk/atomium) v1.0.2 running on Python v3.7.6.
 * [Bio3D](http://thegrantlab.org/bio3d/index.php) v2.4.1 running on R v3.6.2.
 * [Rpdb](https://cran.r-project.org/web/packages/Rpdb/index.html) v2.3 running on R v3.6.2.
 * [BioJava](https://biojava.org) v5.3.0 running on Java v1.8.0.
@@ -41,6 +41,7 @@ Currently, 15 packages across 7 programming languages are included in the benchm
 * [GEMMI](https://gemmi.readthedocs.io/en/latest/index.html) v0.3.6 compiled with gcc v8.3.1; there is also a Python interface but benchmarking was done in C++.
 * [Victor](http://protein.bio.unipd.it/victor/index.php/Main_Page) v1.0 compiled with gcc v7.3.1.
 * [ESBTL](http://esbtl.sourceforge.net/index.html) v1.0-beta01 compiled with gcc v7.3.1.
+* [chemfiles](https://chemfiles.org) v0.9.3 compiled with gcc v7.3.0 (C++ version) or running on Python v3.7.6 (Python version).
 
 ## Results
 
@@ -54,25 +55,25 @@ Note that direct comparison between these times should be treated with caution, 
 
 Each package supports these to varying degrees.
 
-|                       | BioStructures | MIToS         | Biopython     | ProDy         | MDAnalysis    | biotite       | atomium       | Bio3D         | Rpdb          | BioJava       | BioPerl       | BioRuby       | GEMMI         | Victor        | ESBTL         |
-| :-------------------- | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ |
-| Parse PDB 1CRN / ms   | 0.76          | 0.61          | 7.8           | 3.1           | 5.0           | 4.6           | 6.9           | 9.8           | 9.7           | 7.5           | 42.0          | 21.0          | 0.23          | 7.6           | 2.8           |
-| Parse PDB 1HTQ / s    | 3.5           | 3.0           | 17.0          | 2.2           | 1.5           | 4.8           | 20.0          | 2.9           | 14.0          | 1.2           | 49.0          | 13.0          | 0.34          | 11.0          | -             |
-| Parse mmCIF 1CRN / ms | 1.9           | -             | 18.0          | -             | -             | 4.8           | 14.0          | -             | -             | 38.0          | -             | -             | 1.0           | -             | -             |
-| Parse mmCIF 1HTQ / s  | 8.3           | -             | 46.0          | -             | -             | 8.9           | 36.0          | -             | -             | 17.0          | -             | -             | 1.7           | -             | -             |
-| Parse MMTF 1CRN / ms  | 1.1           | -             | 5.2           | -             | -             | 1.3           | 4.7           | -             | -             | 4.5           | -             | -             | -             | -             | -             |
-| Parse MMTF 1HTQ / s   | 3.4           | -             | 16.0          | -             | -             | 0.17          | 44.0          | -             | -             | 0.74          | -             | -             | -             | -             | -             |
-| Count / ms            | 0.17          | 0.017         | 0.24          | 9.8           | 0.074         | -             | -             | 0.17          | 0.18          | -             | 0.47          | 0.076         | -             | -             | -             |
-| Distance / ms         | 0.012         | 0.0042        | 0.28          | 51.0          | 0.65          | -             | -             | 19.0          | 1.3           | -             | 0.55          | 0.33          | -             | -             | -             |
-| Ramachandran / ms     | 1.4           | -             | 120.0         | 220.0         | 1300.0        | -             | -             | -             | -             | -             | -             | -             | -             | -             | -             |
-| Language              | Julia         | Julia         | Python        | Python        | Python        | Python        | Python        | R             | R             | Java          | Perl          | Ruby          | C++/Python    | C++           | C++           |
-| License               | MIT           | MIT           | Biopython     | MIT           | GPLv2         | BSD 3-Clause  | MIT           | GPLv2         | GPLv2/GPLv3   | LGPLv2.1      | GPL/Artistic  | Ruby          | MPLv2/LGPLv3  | GPLv3         | GPLv3         |
-| Hierarchichal parsing | ✓             | ✗             | ✓             | ✓             | ✓             | ✗             | ✓             | ✗             | ✗             | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             |
-| Supports disorder     | ✓             | ✗             | ✓             | ✗             | ✗             | ✗             | ✗             | ✗             | ✗             | ✗             | ✗             | ✗             | ✓             | ✗             | ✓             |
-| Writes PDBs           | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✗             | ✓             | ✓             | ✓             |
-| Parses PDB header     | ✗             | ✗             | ✓             | ✓             | ✗             | ✗             | ✓             | ✓             | ✓             | ✓             | ✗             | ✓             | ✓             | ✓             | ✗             |
-| Superimposition       | ✓             | ✓             | ✓             | ✓             | ✓             | ✓             | ✗             | ✓             | ✗             | ✓             | ✗             | ✗             | ✗             | ✗             | ✗             |
-| PCA                   | ✗             | ✗             | ✗             | ✓             | ✓             | ✗             | ✗             | ✓             | ✗             | ✗             | ✗             | ✗             | ✗             | ✗             | ✗             |
+|                       | BioStructures    | MIToS            | Biopython        | ProDy            | MDAnalysis       | biotite          | atomium          | Bio3D            | Rpdb             | BioJava          | BioPerl          | BioRuby          | GEMMI            | Victor           | ESBTL            | chemfiles-python | chemfiles-cxx    |
+| :-------------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- | :--------------- |
+| Parse PDB 1CRN / ms   | 0.74             | 0.62             | 7.5              | 3.1              | 4.2              | 4.5              | 7.0              | 9.7              | 9.6              | 9.4              | 42.0             | 21.0             | 0.23             | 7.7              | 2.4              | 3.6              | 0.7              |
+| Parse PDB 1HTQ / s    | 3.4              | 3.1              | 17.0             | 2.1              | 1.5              | 4.8              | 21.0             | 2.9              | 14.0             | 1.3              | 49.0             | 13.0             | 0.34             | 11.0             | -                | -                | -                |
+| Parse mmCIF 1CRN / ms | 1.9              | -                | 17.0             | -                | -                | 4.8              | 14.0             | -                | -                | 44.0             | -                | -                | 1.1              | -                | -                | 3.8              | 1.0              |
+| Parse mmCIF 1HTQ / s  | 7.7              | -                | 47.0             | -                | -                | 9.0              | 37.0             | -                | -                | 17.0             | -                | -                | 1.8              | -                | -                | 2.0              | 2.0              |
+| Parse MMTF 1CRN / ms  | 1.1              | -                | 4.7              | -                | -                | 1.3              | 4.7              | -                | -                | 4.0              | -                | -                | -                | -                | -                | 3.2              | 0.46             |
+| Parse MMTF 1HTQ / s   | 3.7              | -                | 17.0             | -                | -                | 0.17             | 44.0             | -                | -                | 0.79             | -                | -                | -                | -                | -                | -                | -                |
+| Count / ms            | 0.17             | 0.017            | 0.26             | 9.4              | 0.076            | -                | -                | 0.16             | 0.18             | -                | 0.47             | 0.079            | -                | -                | -                | 0.75             | 0.11             |
+| Distance / ms         | 0.012            | 0.0041           | 0.28             | 50.0             | 0.65             | -                | -                | 19.0             | 1.3              | -                | 0.56             | 0.33             | -                | -                | -                | 0.56             | 0.19             |
+| Ramachandran / ms     | 1.4              | -                | 130.0            | 220.0            | 1300.0           | -                | -                | -                | -                | -                | -                | -                | -                | -                | -                | 7.6              | 2.2              |
+| Language              | Julia            | Julia            | Python           | Python           | Python           | Python           | Python           | R                | R                | Java             | Perl             | Ruby             | C++/Python       | C++              | C++              | Python           | C++              |
+| License               | MIT              | MIT              | Biopython        | MIT              | GPLv2            | BSD 3-Clause     | MIT              | GPLv2            | GPLv2/GPLv3      | LGPLv2.1         | GPL/Artistic     | Ruby             | MPLv2/LGPLv3     | GPLv3            | GPLv3            | BSD 3-Clause     | BSD 3-Clause     |
+| Hierarchichal parsing | ✓                | ✗                | ✓                | ✓                | ✓                | ✗                | ✓                | ✗                | ✗                | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✗                | ✗                |
+| Supports disorder     | ✓                | ✗                | ✓                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✓                | ✗                | ✓                | ✗                | ✗                |
+| Writes PDBs           | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✗                | ✓                | ✓                | ✓                | ✓                | ✓                |
+| Parses PDB header     | ✗                | ✗                | ✓                | ✓                | ✗                | ✗                | ✓                | ✓                | ✓                | ✓                | ✗                | ✓                | ✓                | ✓                | ✗                | ✗                | ✗                |
+| Superimposition       | ✓                | ✓                | ✓                | ✓                | ✓                | ✓                | ✗                | ✓                | ✗                | ✓                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                |
+| PCA                   | ✗                | ✗                | ✗                | ✓                | ✓                | ✗                | ✗                | ✓                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                | ✗                |
 
 Benchmarks as a plot, sorted by increasing time to parse PDB 1CRN:
 

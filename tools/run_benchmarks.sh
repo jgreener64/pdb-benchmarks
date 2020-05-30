@@ -146,30 +146,31 @@ echo "Victor benchmarks done"
 run_benchmark $nb "ESBTL/parse_pdb data/1CRN.pdb" "ESBTL/parse_pdb_1CRN.dat" "ESBTL,Parse PDB 1CRN,"
 echo "ESBTL benchmarks done"
 
-# chemfiles -- Python
-run_benchmark $nb "python chemfiles/parse_pdb.py data/1CRN.pdb"   "chemfiles/parse_pdb_1CRN-python.dat"   "chemfiles-python,Parse PDB 1CRN,"
+# chemfiles - Python
+run_benchmark $nb "python chemfiles/parse_pdb.py data/1CRN.pdb"   "chemfiles/parse_pdb_1CRN_py.dat"   "chemfiles-python,Parse PDB 1CRN,"
 # FIXME: this uncovered a bug in chemfiles, the bugfix will be avaible on
 # chemfiles>=0.10 when released
 #run_benchmark $ns "python chemfiles/parse_pdb.py data/1HTQ.pdb"   "chemfiles/parse_pdb_1HTQ_py.dat"   "chemfiles-python,Parse PDB 1HTQ,"
 run_benchmark $nb "python chemfiles/parse_mmcif.py data/1CRN.cif" "chemfiles/parse_mmcif_1CRN_py.dat" "chemfiles-python,Parse mmCIF 1CRN,"
 run_benchmark $ns "python chemfiles/parse_mmcif.py data/1HTQ.cif" "chemfiles/parse_mmcif_1HTQ_py.dat" "chemfiles-python,Parse mmCIF 1HTQ,"
 run_benchmark $nb "python chemfiles/parse_mmtf.py data/1CRN.mmtf" "chemfiles/parse_mmtf_1CRN_py.dat"  "chemfiles-python,Parse MMTF 1CRN,"
-# run_benchmark $ns "python chemfiles/parse_mmtf.py data/1HTQ.mmtf" "chemfiles/parse_mmtf_1HTQ_py.dat"  "chemfiles-python,Parse MMTF 1HTQ,"
+#run_benchmark $ns "python chemfiles/parse_mmtf.py data/1HTQ.mmtf" "chemfiles/parse_mmtf_1HTQ_py.dat"  "chemfiles-python,Parse MMTF 1HTQ,"
 run_benchmark $nb "python chemfiles/count.py"                     "chemfiles/count_py.dat"            "chemfiles-python,Count,"
 run_benchmark $nb "python chemfiles/distance.py"                  "chemfiles/distance_py.dat"         "chemfiles-python,Distance,"
 run_benchmark $nb "python chemfiles/ramachandran.py"              "chemfiles/ramachandran_py.dat"     "chemfiles-python,Ramachandran,"
+echo "chemfiles-python benchmarks done"
 
-# chemfiles -- C++
+# chemfiles - C++
 run_benchmark $nb "chemfiles/parse_pdb data/1CRN.pdb"   "chemfiles/parse_pdb_1CRN_cxx.dat"   "chemfiles-cxx,Parse PDB 1CRN,"
-# run_benchmark $ns "chemfiles/parse_pdb data/1HTQ.pdb"   "chemfiles/parse_pdb_1HTQ_cxx.dat"   "chemfiles-cxx,Parse PDB 1HTQ,"
+#run_benchmark $ns "chemfiles/parse_pdb data/1HTQ.pdb"   "chemfiles/parse_pdb_1HTQ_cxx.dat"   "chemfiles-cxx,Parse PDB 1HTQ,"
 run_benchmark $nb "chemfiles/parse_mmcif data/1CRN.cif" "chemfiles/parse_mmcif_1CRN_cxx.dat" "chemfiles-cxx,Parse mmCIF 1CRN,"
 run_benchmark $ns "chemfiles/parse_mmcif data/1HTQ.cif" "chemfiles/parse_mmcif_1HTQ_cxx.dat" "chemfiles-cxx,Parse mmCIF 1HTQ,"
 run_benchmark $nb "chemfiles/parse_mmtf data/1CRN.mmtf" "chemfiles/parse_mmtf_1CRN_cxx.dat"  "chemfiles-cxx,Parse MMTF 1CRN,"
-# run_benchmark $ns "chemfiles/parse_mmtf data/1HTQ.mmtf" "chemfiles/parse_mmtf_1HTQ_cxx.dat"  "chemfiles-cxx,Parse MMTF 1HTQ,"
+#run_benchmark $ns "chemfiles/parse_mmtf data/1HTQ.mmtf" "chemfiles/parse_mmtf_1HTQ_cxx.dat"  "chemfiles-cxx,Parse MMTF 1HTQ,"
 run_benchmark $nb "chemfiles/count"                     "chemfiles/count_cxx.dat"            "chemfiles-cxx,Count,"
 run_benchmark $nb "chemfiles/distance"                  "chemfiles/distance_cxx.dat"         "chemfiles-cxx,Distance,"
 run_benchmark $nb "chemfiles/ramachandran"              "chemfiles/ramachandran_cxx.dat"     "chemfiles-cxx,Ramachandran,"
-echo "chemfiles benchmarks done"
+echo "chemfiles-cxx benchmarks done"
 
 # Plot results
 julia plot/plot.jl
