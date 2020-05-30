@@ -10,7 +10,10 @@ int main(int argc, char* argv[]) {
 
     struct timespec tstart, tend;
     clock_gettime(CLOCK_REALTIME, &tstart);
-    auto frame = chemfiles::Trajectory(mmtf_filepath).read();
+    auto trajectory = chemfiles::Trajectory(mmtf_filepath);
+    for (size_t step=0; step<trajectory.nsteps(); step++) {
+        trajectory.read();
+    }
     clock_gettime(CLOCK_REALTIME, &tend);
 
     printf("%.6f\n", (tend.tv_sec - tstart.tv_sec) + (tend.tv_nsec - tstart.tv_nsec) / 1e9);

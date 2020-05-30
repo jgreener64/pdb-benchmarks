@@ -7,7 +7,9 @@ from chemfiles import Trajectory
 pdb_filepath = sys.argv[1]
 
 start = time.time()
-Trajectory(pdb_filepath).read()
+trajectory = Trajectory(pdb_filepath)
+for frame in trajectory:
+    pass
 end = time.time()
 
 print(end - start)

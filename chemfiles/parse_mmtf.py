@@ -7,7 +7,9 @@ from chemfiles import Trajectory
 mmtf_filepath = sys.argv[1]
 
 start = time.time()
-Trajectory(mmtf_filepath).read()
+trajectory = Trajectory(mmtf_filepath)
+for frame in trajectory:
+    pass
 end = time.time()
 
 print(end - start)
