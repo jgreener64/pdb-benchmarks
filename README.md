@@ -95,6 +95,12 @@ Running Biopython in non-permissive mode picks up more potential problems such a
 * Whilst mmCIF became the standard PDB archive format in 2014, and is a very flexible archive format, that does not mean that it is the best choice for all of bioinformatics. mmCIF files take up a lot of space on disk, are slowest to read and do not yet work with many bioinformatics tools.
 * If you are analysing ensembles of proteins then use packages with that functionality, such as ProDy or Bio3D, rather than writing the code yourself.
 
+## Citation
+
+If you use these benchmarks, please cite the [BioStructures.jl](https://github.com/BioJulia/BioStructures.jl) paper where they appear:
+
+Greener JG, Selvaraj J and Ward BJ. BioStructures.jl: read, write and manipulate macromolecular structures in Julia, *Bioinformatics* (2020) - [link](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa502/5837108?guestAccessKey=aec90643-1d43-4521-9883-4a4a669187da)
+
 ## Contributing
 
 If you want to contribute benchmarks for a package, please make a pull request with the script(s) in a directory like the other packages. I will run the benchmarks again and change the README, thanks.
