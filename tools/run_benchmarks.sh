@@ -135,6 +135,8 @@ run_benchmark $nb "GEMMI/parse_pdb data/1CRN.pdb"   "GEMMI/parse_pdb_1CRN.dat"  
 run_benchmark $ns "GEMMI/parse_pdb data/1HTQ.pdb"   "GEMMI/parse_pdb_1HTQ.dat"   "GEMMI,Parse PDB 1HTQ,"
 run_benchmark $nb "GEMMI/parse_mmcif data/1CRN.cif" "GEMMI/parse_mmcif_1CRN.dat" "GEMMI,Parse mmCIF 1CRN,"
 run_benchmark $ns "GEMMI/parse_mmcif data/1HTQ.cif" "GEMMI/parse_mmcif_1HTQ.dat" "GEMMI,Parse mmCIF 1HTQ,"
+run_benchmark $nb "GEMMI/count"                     "GEMMI/count.dat"            "GEMMI,Count,"
+run_benchmark $nb "GEMMI/distance"                  "GEMMI/distance.dat"         "GEMMI,Distance,"
 echo "GEMMI benchmarks done"
 
 # Victor

@@ -6,6 +6,8 @@ BioJava/dependency-reduced-pom.xml
 GEMMI/gemmi
 GEMMI/parse_pdb
 GEMMI/parse_mmcif
+GEMMI/count
+GEMMI/distance
 Victor/*.o
 Victor/parse_pdb
 ESBTL/CMakeFiles

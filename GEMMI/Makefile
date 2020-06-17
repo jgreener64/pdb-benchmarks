@@ -1,8 +1,8 @@
-TARGETS=parse_pdb parse_mmcif count distance #ramachandran
+TARGETS=parse_pdb parse_mmcif count distance
 all: ${TARGETS}
 
 %: %.cc
-	${CXX} -O2 -Igemmi/include $< -o $@
+	${CXX} -std=c++11 -lrt -O2 -Igemmi/include $< -o $@
 
 clean:
 	rm -rf ${TARGETS}
